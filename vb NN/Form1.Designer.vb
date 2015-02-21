@@ -46,6 +46,7 @@ Partial Class Form1
         Me.TFinancialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FamilyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TFamilyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LikeId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProfileBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -104,7 +105,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Location = New System.Drawing.Point(16, 15)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1465, 390)
         Me.Panel1.TabIndex = 0
@@ -113,10 +114,10 @@ Partial Class Form1
         '
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn, Me.AgeDataGridViewTextBoxColumn, Me.EthnicityDataGridViewTextBoxColumn, Me.BuildDataGridViewTextBoxColumn, Me.EducationDataGridViewTextBoxColumn, Me.CitizenshipDataGridViewTextBoxColumn, Me.HobbiesDataGridViewTextBoxColumn, Me.FinancialDataGridViewTextBoxColumn, Me.FamilyDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn, Me.AgeDataGridViewTextBoxColumn, Me.EthnicityDataGridViewTextBoxColumn, Me.BuildDataGridViewTextBoxColumn, Me.EducationDataGridViewTextBoxColumn, Me.CitizenshipDataGridViewTextBoxColumn, Me.HobbiesDataGridViewTextBoxColumn, Me.FinancialDataGridViewTextBoxColumn, Me.FamilyDataGridViewTextBoxColumn, Me.LikeId})
         Me.DataGridView1.DataSource = Me.ProfileBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(8, 78)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1449, 306)
         Me.DataGridView1.TabIndex = 22
@@ -272,6 +273,12 @@ Partial Class Form1
         Me.TFamilyBindingSource.DataMember = "TFamily"
         Me.TFamilyBindingSource.DataSource = Me.DataSetBindingSource
         '
+        'LikeId
+        '
+        Me.LikeId.DataPropertyName = "LikeId"
+        Me.LikeId.HeaderText = "LikeId"
+        Me.LikeId.Name = "LikeId"
+        '
         'ProfileBindingSource
         '
         Me.ProfileBindingSource.DataMember = "Profile"
@@ -280,7 +287,7 @@ Partial Class Form1
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(1349, 0)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(112, 70)
         Me.Button2.TabIndex = 1
@@ -313,7 +320,7 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.ComboBox30)
         Me.Panel2.Controls.Add(Me.ComboBox29)
         Me.Panel2.Location = New System.Drawing.Point(16, 400)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1465, 78)
         Me.Panel2.TabIndex = 1
@@ -321,7 +328,7 @@ Partial Class Form1
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(1272, 41)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(187, 26)
         Me.Button4.TabIndex = 45
@@ -331,7 +338,7 @@ Partial Class Form1
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(1272, 7)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(187, 26)
         Me.Button3.TabIndex = 44
@@ -342,7 +349,7 @@ Partial Class Form1
         '
         Me.ComboBox19.FormattingEnabled = True
         Me.ComboBox19.Location = New System.Drawing.Point(1137, 42)
-        Me.ComboBox19.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox19.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox19.Name = "ComboBox19"
         Me.ComboBox19.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox19.TabIndex = 43
@@ -351,7 +358,7 @@ Partial Class Form1
         '
         Me.ComboBox26.FormattingEnabled = True
         Me.ComboBox26.Location = New System.Drawing.Point(195, 42)
-        Me.ComboBox26.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox26.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox26.Name = "ComboBox26"
         Me.ComboBox26.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox26.TabIndex = 36
@@ -360,7 +367,7 @@ Partial Class Form1
         '
         Me.ComboBox20.FormattingEnabled = True
         Me.ComboBox20.Location = New System.Drawing.Point(1003, 42)
-        Me.ComboBox20.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox20.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox20.Name = "ComboBox20"
         Me.ComboBox20.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox20.TabIndex = 42
@@ -369,7 +376,7 @@ Partial Class Form1
         '
         Me.ComboBox36.FormattingEnabled = True
         Me.ComboBox36.Location = New System.Drawing.Point(60, 9)
-        Me.ComboBox36.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox36.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox36.Name = "ComboBox36"
         Me.ComboBox36.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox36.TabIndex = 24
@@ -378,7 +385,7 @@ Partial Class Form1
         '
         Me.ComboBox21.FormattingEnabled = True
         Me.ComboBox21.Location = New System.Drawing.Point(868, 42)
-        Me.ComboBox21.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox21.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox21.Name = "ComboBox21"
         Me.ComboBox21.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox21.TabIndex = 41
@@ -397,7 +404,7 @@ Partial Class Form1
         '
         Me.ComboBox22.FormattingEnabled = True
         Me.ComboBox22.Location = New System.Drawing.Point(733, 42)
-        Me.ComboBox22.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox22.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox22.Name = "ComboBox22"
         Me.ComboBox22.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox22.TabIndex = 40
@@ -416,7 +423,7 @@ Partial Class Form1
         '
         Me.ComboBox23.FormattingEnabled = True
         Me.ComboBox23.Location = New System.Drawing.Point(599, 42)
-        Me.ComboBox23.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox23.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox23.Name = "ComboBox23"
         Me.ComboBox23.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox23.TabIndex = 39
@@ -425,7 +432,7 @@ Partial Class Form1
         '
         Me.ComboBox35.FormattingEnabled = True
         Me.ComboBox35.Location = New System.Drawing.Point(195, 9)
-        Me.ComboBox35.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox35.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox35.Name = "ComboBox35"
         Me.ComboBox35.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox35.TabIndex = 27
@@ -434,7 +441,7 @@ Partial Class Form1
         '
         Me.ComboBox24.FormattingEnabled = True
         Me.ComboBox24.Location = New System.Drawing.Point(464, 42)
-        Me.ComboBox24.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox24.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox24.Name = "ComboBox24"
         Me.ComboBox24.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox24.TabIndex = 38
@@ -443,7 +450,7 @@ Partial Class Form1
         '
         Me.ComboBox34.FormattingEnabled = True
         Me.ComboBox34.Location = New System.Drawing.Point(329, 9)
-        Me.ComboBox34.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox34.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox34.Name = "ComboBox34"
         Me.ComboBox34.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox34.TabIndex = 28
@@ -452,7 +459,7 @@ Partial Class Form1
         '
         Me.ComboBox25.FormattingEnabled = True
         Me.ComboBox25.Location = New System.Drawing.Point(329, 42)
-        Me.ComboBox25.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox25.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox25.Name = "ComboBox25"
         Me.ComboBox25.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox25.TabIndex = 37
@@ -461,7 +468,7 @@ Partial Class Form1
         '
         Me.ComboBox33.FormattingEnabled = True
         Me.ComboBox33.Location = New System.Drawing.Point(464, 9)
-        Me.ComboBox33.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox33.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox33.Name = "ComboBox33"
         Me.ComboBox33.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox33.TabIndex = 29
@@ -470,7 +477,7 @@ Partial Class Form1
         '
         Me.ComboBox32.FormattingEnabled = True
         Me.ComboBox32.Location = New System.Drawing.Point(599, 9)
-        Me.ComboBox32.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox32.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox32.Name = "ComboBox32"
         Me.ComboBox32.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox32.TabIndex = 30
@@ -479,7 +486,7 @@ Partial Class Form1
         '
         Me.ComboBox27.FormattingEnabled = True
         Me.ComboBox27.Location = New System.Drawing.Point(60, 42)
-        Me.ComboBox27.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox27.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox27.Name = "ComboBox27"
         Me.ComboBox27.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox27.TabIndex = 35
@@ -488,7 +495,7 @@ Partial Class Form1
         '
         Me.ComboBox31.FormattingEnabled = True
         Me.ComboBox31.Location = New System.Drawing.Point(733, 9)
-        Me.ComboBox31.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox31.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox31.Name = "ComboBox31"
         Me.ComboBox31.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox31.TabIndex = 31
@@ -497,7 +504,7 @@ Partial Class Form1
         '
         Me.ComboBox28.FormattingEnabled = True
         Me.ComboBox28.Location = New System.Drawing.Point(1137, 9)
-        Me.ComboBox28.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox28.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox28.Name = "ComboBox28"
         Me.ComboBox28.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox28.TabIndex = 34
@@ -506,7 +513,7 @@ Partial Class Form1
         '
         Me.ComboBox30.FormattingEnabled = True
         Me.ComboBox30.Location = New System.Drawing.Point(868, 9)
-        Me.ComboBox30.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox30.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox30.Name = "ComboBox30"
         Me.ComboBox30.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox30.TabIndex = 32
@@ -515,7 +522,7 @@ Partial Class Form1
         '
         Me.ComboBox29.FormattingEnabled = True
         Me.ComboBox29.Location = New System.Drawing.Point(1003, 9)
-        Me.ComboBox29.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox29.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox29.Name = "ComboBox29"
         Me.ComboBox29.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox29.TabIndex = 33
@@ -567,7 +574,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1364, 491)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Neural Networks Project"
         Me.Panel1.ResumeLayout(False)
@@ -647,5 +654,6 @@ Partial Class Form1
     Friend WithEvents HobbiesDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents FinancialDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents FamilyDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
+    Friend WithEvents LikeId As System.Windows.Forms.DataGridViewTextBoxColumn
 
 End Class
