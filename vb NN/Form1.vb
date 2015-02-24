@@ -35,6 +35,34 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim pro = New Profile
+        'Dim comb As String = ""
+        pro.att(0) = CInt(ComboBox36.Text)
+        pro.att(1) = CInt(ComboBox35.Text)
+        pro.att(2) = CInt(ComboBox34.Text)
+        pro.att(3) = CInt(ComboBox33.Text)
+        pro.att(4) = CInt(ComboBox32.Text)
+        pro.att(5) = CInt(ComboBox31.Text)
+        pro.att(6) = CInt(ComboBox30.Text)
+        pro.att(7) = CInt(ComboBox29.Text)
+        pro.att(8) = CInt(ComboBox28.Text)
+
+
+    End Sub
+
+    Private Sub ComboBox36_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox36.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub ComboBox28_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox28.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub ComboBox34_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox34.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
 End Class
