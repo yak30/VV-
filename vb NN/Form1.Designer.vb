@@ -24,6 +24,8 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
@@ -48,7 +50,6 @@ Partial Class Form1
         Me.TFamilyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LikeId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProfileBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -82,8 +83,6 @@ Partial Class Form1
         Me.TFamilyTableAdapter = New vb_NN.DataSet1TableAdapters.TFamilyTableAdapter()
         Me.TBuildTableAdapter = New vb_NN.DataSet1TableAdapters.TBuildTableAdapter()
         Me.ProfileTableAdapter = New vb_NN.DataSet1TableAdapters.ProfileTableAdapter()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TSexBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,12 +106,27 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Location = New System.Drawing.Point(16, 15)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1465, 390)
         Me.Panel1.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(108, 24)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(98, 17)
+        Me.Label1.TabIndex = 24
+        Me.Label1.Text = "Your match is:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(233, 24)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(657, 22)
+        Me.TextBox1.TabIndex = 23
         '
         'DataGridView1
         '
@@ -287,16 +301,6 @@ Partial Class Form1
         '
         Me.ProfileBindingSource.DataMember = "Profile"
         Me.ProfileBindingSource.DataSource = Me.DataSetBindingSource
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(1349, 0)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 70)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "From DB..."
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -590,27 +594,11 @@ Partial Class Form1
         '
         Me.ProfileTableAdapter.ClearBeforeFill = True
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(233, 24)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(657, 22)
-        Me.TextBox1.TabIndex = 23
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(108, 24)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(98, 17)
-        Me.Label1.TabIndex = 24
-        Me.Label1.Text = "Your match is:"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1354, 491)
+        Me.ClientSize = New System.Drawing.Size(1498, 491)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -637,7 +625,6 @@ Partial Class Form1
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button

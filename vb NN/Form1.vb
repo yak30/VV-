@@ -1,5 +1,6 @@
 ﻿Public Class Form1
     Dim oneway, twoway As INN
+    Dim ExL As IList(Of Example)
     Dim learned1way, learned2way As Boolean
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -25,7 +26,60 @@
         Me.TSexTableAdapter.Fill(Me.DataSet1.TSex)
 
     End Sub
+    Private Sub Fill()
+        ExL = New List(Of Example)
 
+        Dim p1 = New Profile
+        p1.att(0) = 1
+        p1.att(1) = 2
+        p1.att(2) = 2
+        p1.att(3) = 3
+        p1.att(4) = 2
+        p1.att(5) = 2
+        p1.att(6) = 2
+        p1.att(7) = 1
+        p1.att(8) = 2
+
+        Dim p2 = New Profile
+        p2.att(0) = 2
+        p2.att(1) = 2
+        p2.att(2) = 2
+        p2.att(3) = 2
+        p2.att(4) = 4
+        p2.att(5) = 3
+        p2.att(6) = 1
+        p2.att(7) = 2
+        p2.att(8) = 1
+        
+        Dim p3 = New Profile
+        p3.att(0) = 3
+        p3.att(1) = 1
+        p3.att(2) = 1
+        p3.att(3) = 2
+        p3.att(4) = 3
+        p3.att(5) = 2
+        p3.att(6) = 2
+        p3.att(7) = 2
+        p3.att(8) = 2
+
+        Dim exp1 = New Example
+        exp1.person = p1
+        exp1.likes = p2
+
+        Dim exp2 = New Example
+        exp2.person = p2
+        exp2.likes = p1
+
+        Dim exp3 = New Example
+        exp3.person = p3
+        exp3.likes = p2
+
+        ExL.Add(exp1)
+        ExL.Add(exp2)
+        ExL.Add(exp3)
+
+
+    End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -47,7 +101,13 @@
         pro.att(7) = CInt(ComboBox29.Text)
         pro.att(8) = CInt(ComboBox28.Text)
 
+        Dim ex = New Example
+        ex.likes = pro
+        ex.person = pro
 
+        Fill()
+
+        oneway.learn(ExL)
     End Sub
 
     Private Sub ComboBox36_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox36.SelectedIndexChanged
@@ -71,6 +131,7 @@ Public Class Profile
 End Class
 Public Class Example
     Public person, likes As Profile
+
 End Class
 Public Interface INN
     Sub learn(examples As List(Of Example))
