@@ -50,7 +50,7 @@
         p2.att(6) = 1
         p2.att(7) = 2
         p2.att(8) = 1
-        
+
         Dim p3 = New Profile
         p3.att(0) = 3
         p3.att(1) = 1
@@ -91,7 +91,7 @@
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim pro = New Profile
         'Dim comb As String = ""
-        pro.att(0) = CInt(ComboBox36.Text)
+        pro.att(0) = CInt(ComboBox36.Text) ''YAK: why don't you use indexes?
         pro.att(1) = CInt(ComboBox35.Text)
         pro.att(2) = CInt(ComboBox34.Text)
         pro.att(3) = CInt(ComboBox33.Text)
@@ -99,15 +99,21 @@
         pro.att(5) = CInt(ComboBox31.Text)
         pro.att(6) = CInt(ComboBox30.Text)
         pro.att(7) = CInt(ComboBox29.Text)
-        pro.att(8) = CInt(ComboBox28.Text)
+        pro.att(8) = CInt(ComboBox28.Text) ''YAK: this one is ignored because 8 dimensions go from 0 to 7
 
         Dim ex = New Example
         ex.likes = pro
         ex.person = pro
 
         Fill()
+        ''YAK: you didn't instantiate an NN.
+        ''YAK: also, NN code was broken. I fixed it, but did not check results.
+        'oneway.learn(ExL)
 
+        oneway = New NN(8)
         oneway.learn(ExL)
+        Dim mres = oneway.match(pro)
+        MsgBox(String.Join(" ", mres.att))
     End Sub
 
     Private Sub ComboBox36_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox36.SelectedIndexChanged
