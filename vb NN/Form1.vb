@@ -40,6 +40,7 @@
         p1.att(7) = 1
         p1.att(8) = 2
 
+
         Dim p2 = New Profile
         p2.att(0) = 2
         p2.att(1) = 2
@@ -50,7 +51,7 @@
         p2.att(6) = 1
         p2.att(7) = 2
         p2.att(8) = 1
-        
+
         Dim p3 = New Profile
         p3.att(0) = 3
         p3.att(1) = 1
@@ -61,6 +62,28 @@
         p3.att(6) = 2
         p3.att(7) = 2
         p3.att(8) = 2
+
+        Dim p4 = New Profile
+        p4.att(0) = 4
+        p4.att(1) = 2
+        p4.att(2) = 2
+        p4.att(3) = 3
+        p4.att(4) = 2
+        p4.att(5) = 2
+        p4.att(6) = 2
+        p4.att(7) = 2
+        p4.att(8) = 2
+
+        Dim p5 = New Profile
+        p5.att(0) = 5
+        p5.att(1) = 2
+        p5.att(2) = 2
+        p5.att(3) = 3
+        p5.att(4) = 1
+        p5.att(5) = 2
+        p5.att(6) = 2
+        p5.att(7) = 1
+        p5.att(8) = 1
 
         Dim exp1 = New Example
         exp1.person = p1
@@ -74,10 +97,19 @@
         exp3.person = p3
         exp3.likes = p2
 
+        Dim exp4 = New Example
+        exp4.person = p4
+        exp4.likes = p5
+
+        Dim exp5 = New Example
+        exp5.person = p5
+        exp5.likes = p4
+
         ExL.Add(exp1)
         ExL.Add(exp2)
         ExL.Add(exp3)
-
+        ExL.Add(exp4)
+        ExL.Add(exp5)
 
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs)
@@ -91,23 +123,34 @@
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim pro = New Profile
         'Dim comb As String = ""
-        pro.att(0) = CInt(ComboBox36.Text)
-        pro.att(1) = CInt(ComboBox35.Text)
-        pro.att(2) = CInt(ComboBox34.Text)
-        pro.att(3) = CInt(ComboBox33.Text)
-        pro.att(4) = CInt(ComboBox32.Text)
-        pro.att(5) = CInt(ComboBox31.Text)
-        pro.att(6) = CInt(ComboBox30.Text)
-        pro.att(7) = CInt(ComboBox29.Text)
-        pro.att(8) = CInt(ComboBox28.Text)
-
-        Dim ex = New Example
-        ex.likes = pro
-        ex.person = pro
+        'pro.att(0) = 2 ''YAK: why don't you use indexes? ,We dont need to use it at all
+        pro.att(0) = CInt(ComboBox35.Text.Substring(0, 1)) 'The list start from Age colum.(I think it get the Women sex as defult?)
+        pro.att(1) = CInt(ComboBox34.Text.Substring(0, 1))
+        pro.att(2) = CInt(ComboBox33.Text.Substring(0, 1))
+        pro.att(3) = CInt(ComboBox32.Text.Substring(0, 1))
+        pro.att(4) = CInt(ComboBox31.Text.Substring(0, 1))
+        pro.att(5) = CInt(ComboBox30.Text.Substring(0, 1))
+        pro.att(6) = CInt(ComboBox29.Text.Substring(0, 1))
+        pro.att(7) = CInt(ComboBox28.Text.Substring(0, 1))
 
         Fill()
+        ''YAK: you didn't instantiate an NN.
+        ''YAK: also, NN code was broken. I fixed it, but did not check results.
 
+        oneway = New NN(8)
         oneway.learn(ExL)
+        Dim mres = oneway.match(pro)
+
+        'MsgBox(String.Join(" ", mres.att))
+        ComboBox27.Text = mres.att(0).ToString
+        ComboBox26.Text = mres.att(1).ToString
+        ComboBox25.Text = mres.att(2).ToString
+        ComboBox24.Text = mres.att(3).ToString
+        ComboBox23.Text = mres.att(4).ToString
+        ComboBox22.Text = mres.att(5).ToString
+        ComboBox21.Text = mres.att(6).ToString
+        ComboBox20.Text = mres.att(7).ToString
+        ComboBox19.Text = mres.att(8).ToString
     End Sub
 
     Private Sub ComboBox36_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox36.SelectedIndexChanged
@@ -122,7 +165,11 @@
 
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ComboBox26_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox26.SelectedIndexChanged
 
     End Sub
 End Class
