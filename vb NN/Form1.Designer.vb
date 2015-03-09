@@ -51,10 +51,9 @@ Partial Class Form1
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.ComboBox19 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox28 = New System.Windows.Forms.ComboBox()
         Me.ComboBox26 = New System.Windows.Forms.ComboBox()
         Me.ComboBox20 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox36 = New System.Windows.Forms.ComboBox()
         Me.ComboBox21 = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox22 = New System.Windows.Forms.ComboBox()
@@ -68,7 +67,6 @@ Partial Class Form1
         Me.ComboBox32 = New System.Windows.Forms.ComboBox()
         Me.ComboBox27 = New System.Windows.Forms.ComboBox()
         Me.ComboBox31 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox28 = New System.Windows.Forms.ComboBox()
         Me.ComboBox30 = New System.Windows.Forms.ComboBox()
         Me.ComboBox29 = New System.Windows.Forms.ComboBox()
         Me.TSexTableAdapter = New vb_NN.DataSet1TableAdapters.TSexTableAdapter()
@@ -287,10 +285,9 @@ Partial Class Form1
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Button4)
         Me.Panel2.Controls.Add(Me.Button3)
-        Me.Panel2.Controls.Add(Me.ComboBox19)
+        Me.Panel2.Controls.Add(Me.ComboBox28)
         Me.Panel2.Controls.Add(Me.ComboBox26)
         Me.Panel2.Controls.Add(Me.ComboBox20)
-        Me.Panel2.Controls.Add(Me.ComboBox36)
         Me.Panel2.Controls.Add(Me.ComboBox21)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.ComboBox22)
@@ -304,7 +301,6 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.ComboBox32)
         Me.Panel2.Controls.Add(Me.ComboBox27)
         Me.Panel2.Controls.Add(Me.ComboBox31)
-        Me.Panel2.Controls.Add(Me.ComboBox28)
         Me.Panel2.Controls.Add(Me.ComboBox30)
         Me.Panel2.Controls.Add(Me.ComboBox29)
         Me.Panel2.Location = New System.Drawing.Point(16, 400)
@@ -315,7 +311,7 @@ Partial Class Form1
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(1272, 41)
+        Me.Button4.Location = New System.Drawing.Point(1166, 46)
         Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(187, 26)
@@ -325,7 +321,7 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(1272, 7)
+        Me.Button3.Location = New System.Drawing.Point(1166, 11)
         Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(187, 26)
@@ -333,14 +329,16 @@ Partial Class Form1
         Me.Button3.Text = "Women that want this"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'ComboBox19
+        'ComboBox28
         '
-        Me.ComboBox19.FormattingEnabled = True
-        Me.ComboBox19.Location = New System.Drawing.Point(1137, 42)
-        Me.ComboBox19.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox19.Name = "ComboBox19"
-        Me.ComboBox19.Size = New System.Drawing.Size(125, 24)
-        Me.ComboBox19.TabIndex = 43
+        Me.ComboBox28.FormattingEnabled = True
+        Me.ComboBox28.Items.AddRange(New Object() {"1", "2", "3"})
+        Me.ComboBox28.Location = New System.Drawing.Point(1003, 13)
+        Me.ComboBox28.Margin = New System.Windows.Forms.Padding(5)
+        Me.ComboBox28.Name = "ComboBox28"
+        Me.ComboBox28.Size = New System.Drawing.Size(125, 24)
+        Me.ComboBox28.TabIndex = 34
+        Me.ComboBox28.Text = "1-Bachelor"
         '
         'ComboBox26
         '
@@ -359,17 +357,6 @@ Partial Class Form1
         Me.ComboBox20.Name = "ComboBox20"
         Me.ComboBox20.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox20.TabIndex = 42
-        '
-        'ComboBox36
-        '
-        Me.ComboBox36.FormattingEnabled = True
-        Me.ComboBox36.Location = New System.Drawing.Point(60, 9)
-        Me.ComboBox36.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox36.MaxLength = 4
-        Me.ComboBox36.Name = "ComboBox36"
-        Me.ComboBox36.Size = New System.Drawing.Size(125, 24)
-        Me.ComboBox36.TabIndex = 24
-        Me.ComboBox36.Text = "Women"
         '
         'ComboBox21
         '
@@ -421,9 +408,9 @@ Partial Class Form1
         'ComboBox35
         '
         Me.ComboBox35.FormattingEnabled = True
-        Me.ComboBox35.Items.AddRange(New Object() {"1:  18-25", "2:  26-34", "3:  35-44", "4:  45+"})
-        Me.ComboBox35.Location = New System.Drawing.Point(195, 9)
-        Me.ComboBox35.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBox35.Items.AddRange(New Object() {"1:  18 - 25", "2:  26 - 34", "3:  35 - 44", "4:  45+"})
+        Me.ComboBox35.Location = New System.Drawing.Point(60, 12)
+        Me.ComboBox35.Margin = New System.Windows.Forms.Padding(5)
         Me.ComboBox35.Name = "ComboBox35"
         Me.ComboBox35.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox35.TabIndex = 27
@@ -441,9 +428,9 @@ Partial Class Form1
         'ComboBox34
         '
         Me.ComboBox34.FormattingEnabled = True
-        Me.ComboBox34.Items.AddRange(New Object() {"1-Arab", "2-Ashkenazi", "3-Russian", "4-Sephrdi"})
-        Me.ComboBox34.Location = New System.Drawing.Point(329, 9)
-        Me.ComboBox34.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBox34.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        Me.ComboBox34.Location = New System.Drawing.Point(195, 13)
+        Me.ComboBox34.Margin = New System.Windows.Forms.Padding(5)
         Me.ComboBox34.Name = "ComboBox34"
         Me.ComboBox34.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox34.TabIndex = 28
@@ -461,9 +448,9 @@ Partial Class Form1
         'ComboBox33
         '
         Me.ComboBox33.FormattingEnabled = True
-        Me.ComboBox33.Items.AddRange(New Object() {"1-tall\full", "2-short\thin", "3-tall\full", "4-tall\thin"})
-        Me.ComboBox33.Location = New System.Drawing.Point(464, 9)
-        Me.ComboBox33.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBox33.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        Me.ComboBox33.Location = New System.Drawing.Point(329, 13)
+        Me.ComboBox33.Margin = New System.Windows.Forms.Padding(5)
         Me.ComboBox33.Name = "ComboBox33"
         Me.ComboBox33.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox33.TabIndex = 29
@@ -472,9 +459,9 @@ Partial Class Form1
         'ComboBox32
         '
         Me.ComboBox32.FormattingEnabled = True
-        Me.ComboBox32.Items.AddRange(New Object() {"1-High School", "2--College", "3-Elementary"})
-        Me.ComboBox32.Location = New System.Drawing.Point(599, 9)
-        Me.ComboBox32.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBox32.Items.AddRange(New Object() {"1", "2", "3"})
+        Me.ComboBox32.Location = New System.Drawing.Point(464, 13)
+        Me.ComboBox32.Margin = New System.Windows.Forms.Padding(5)
         Me.ComboBox32.Name = "ComboBox32"
         Me.ComboBox32.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox32.TabIndex = 30
@@ -492,31 +479,20 @@ Partial Class Form1
         'ComboBox31
         '
         Me.ComboBox31.FormattingEnabled = True
-        Me.ComboBox31.Items.AddRange(New Object() {"1-10 years", "2-20 years", "3-5 years", "4-life"})
-        Me.ComboBox31.Location = New System.Drawing.Point(733, 9)
-        Me.ComboBox31.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBox31.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        Me.ComboBox31.Location = New System.Drawing.Point(599, 13)
+        Me.ComboBox31.Margin = New System.Windows.Forms.Padding(5)
         Me.ComboBox31.Name = "ComboBox31"
         Me.ComboBox31.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox31.TabIndex = 31
         Me.ComboBox31.Text = "1:- 10 years"
         '
-        'ComboBox28
-        '
-        Me.ComboBox28.FormattingEnabled = True
-        Me.ComboBox28.Items.AddRange(New Object() {"1-Bachleor", "2-Divorced", "3-Divoresd+"})
-        Me.ComboBox28.Location = New System.Drawing.Point(1137, 9)
-        Me.ComboBox28.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox28.Name = "ComboBox28"
-        Me.ComboBox28.Size = New System.Drawing.Size(125, 24)
-        Me.ComboBox28.TabIndex = 34
-        Me.ComboBox28.Text = "1-Bachelor"
-        '
         'ComboBox30
         '
         Me.ComboBox30.FormattingEnabled = True
-        Me.ComboBox30.Items.AddRange(New Object() {"1-Cooking", "2-Tennis", "3-Modeling", "4-Role play games"})
-        Me.ComboBox30.Location = New System.Drawing.Point(868, 9)
-        Me.ComboBox30.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBox30.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        Me.ComboBox30.Location = New System.Drawing.Point(733, 13)
+        Me.ComboBox30.Margin = New System.Windows.Forms.Padding(5)
         Me.ComboBox30.Name = "ComboBox30"
         Me.ComboBox30.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox30.TabIndex = 32
@@ -525,9 +501,9 @@ Partial Class Form1
         'ComboBox29
         '
         Me.ComboBox29.FormattingEnabled = True
-        Me.ComboBox29.Items.AddRange(New Object() {"1-20k", "2-40k", "3-60k", "4-unemployed"})
-        Me.ComboBox29.Location = New System.Drawing.Point(1003, 9)
-        Me.ComboBox29.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBox29.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        Me.ComboBox29.Location = New System.Drawing.Point(868, 13)
+        Me.ComboBox29.Margin = New System.Windows.Forms.Padding(5)
         Me.ComboBox29.Name = "ComboBox29"
         Me.ComboBox29.Size = New System.Drawing.Size(125, 24)
         Me.ComboBox29.TabIndex = 33
@@ -577,7 +553,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1354, 491)
+        Me.ClientSize = New System.Drawing.Size(1511, 604)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -606,7 +582,6 @@ Partial Class Form1
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents ComboBox36 As System.Windows.Forms.ComboBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents ComboBox35 As System.Windows.Forms.ComboBox
@@ -651,7 +626,6 @@ Partial Class Form1
     Friend WithEvents FinancialDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents FamilyDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents LikeId As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ComboBox19 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox26 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox20 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox21 As System.Windows.Forms.ComboBox

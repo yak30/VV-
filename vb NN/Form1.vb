@@ -142,18 +142,19 @@
         Dim mres = oneway.match(pro)
 
         'MsgBox(String.Join(" ", mres.att))
-        ComboBox27.Text = mres.att(0).ToString
-        ComboBox26.Text = mres.att(1).ToString
-        ComboBox25.Text = mres.att(2).ToString
-        ComboBox24.Text = mres.att(3).ToString
-        ComboBox23.Text = mres.att(4).ToString
-        ComboBox22.Text = mres.att(5).ToString
-        ComboBox21.Text = mres.att(6).ToString
-        ComboBox20.Text = mres.att(7).ToString
-        ComboBox19.Text = mres.att(8).ToString
+        ComboBox27.Text = ComboBox35.Items(mres.att(0))
+        ComboBox26.Text = ComboBox34.Items(mres.att(1))
+        ComboBox25.Text = ComboBox33.Items(mres.att(2))
+        ComboBox24.Text = ComboBox32.Items(mres.att(3))
+        ComboBox23.Text = ComboBox31.Items(mres.att(4))
+        ComboBox22.Text = ComboBox30.Items(mres.att(5))
+        ComboBox21.Text = ComboBox29.Items(mres.att(6))
+        ComboBox20.Text = ComboBox28.Items(mres.att(7))
+        'ComboBox19.Text = ComboBox35.Items(mres.att(8))
+
     End Sub
 
-    Private Sub ComboBox36_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox36.SelectedIndexChanged
+    Private Sub ComboBox36_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 
