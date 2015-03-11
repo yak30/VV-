@@ -42,7 +42,7 @@
 
 
         Dim p2 = New Profile
-        p2.att(0) = 2
+        p2.att(0) = 1
         p2.att(1) = 2
         p2.att(2) = 2
         p2.att(3) = 2
@@ -53,7 +53,7 @@
         p2.att(8) = 1
 
         Dim p3 = New Profile
-        p3.att(0) = 3
+        p3.att(0) = 1
         p3.att(1) = 1
         p3.att(2) = 1
         p3.att(3) = 2
@@ -64,7 +64,7 @@
         p3.att(8) = 2
 
         Dim p4 = New Profile
-        p4.att(0) = 4
+        p4.att(0) = 1
         p4.att(1) = 2
         p4.att(2) = 2
         p4.att(3) = 3
@@ -75,7 +75,7 @@
         p4.att(8) = 2
 
         Dim p5 = New Profile
-        p5.att(0) = 5
+        p5.att(0) = 1
         p5.att(1) = 2
         p5.att(2) = 2
         p5.att(3) = 3
@@ -124,14 +124,16 @@
         Dim pro = New Profile
         'Dim comb As String = ""
         'pro.att(0) = 2 ''YAK: why don't you use indexes? ,We dont need to use it at all
-        pro.att(0) = CInt(ComboBox35.Text.Substring(0, 1)) 'The list start from Age colum.(I think it get the Women sex as defult?)
-        pro.att(1) = CInt(ComboBox34.Text.Substring(0, 1))
-        pro.att(2) = CInt(ComboBox33.Text.Substring(0, 1))
-        pro.att(3) = CInt(ComboBox32.Text.Substring(0, 1))
-        pro.att(4) = CInt(ComboBox31.Text.Substring(0, 1))
-        pro.att(5) = CInt(ComboBox30.Text.Substring(0, 1))
-        pro.att(6) = CInt(ComboBox29.Text.Substring(0, 1))
-        pro.att(7) = CInt(ComboBox28.Text.Substring(0, 1))
+        'pro.att(0) = CInt(ComboBox35.Text.Substring(0, 1)) 'The list start from Age colum.(I think it get the Women sex as defult?)
+        pro.att(0) = ComboBox36.SelectedIndex
+        pro.att(1) = ComboBox35.SelectedIndex
+        pro.att(2) = ComboBox34.SelectedIndex
+        pro.att(3) = ComboBox33.SelectedIndex
+        pro.att(4) = ComboBox32.SelectedIndex
+        pro.att(5) = ComboBox31.SelectedIndex
+        pro.att(6) = ComboBox30.SelectedIndex
+        pro.att(7) = ComboBox29.SelectedIndex
+        pro.att(8) = ComboBox28.SelectedIndex
 
         Fill()
         ''YAK: you didn't instantiate an NN.
@@ -141,16 +143,18 @@
         oneway.learn(ExL)
         Dim mres = oneway.match(pro)
 
-        'MsgBox(String.Join(" ", mres.att))
-        ComboBox27.Text = ComboBox35.Items(mres.att(0))
-        ComboBox26.Text = ComboBox34.Items(mres.att(1))
-        ComboBox25.Text = ComboBox33.Items(mres.att(2))
-        ComboBox24.Text = ComboBox32.Items(mres.att(3))
-        ComboBox23.Text = ComboBox31.Items(mres.att(4))
-        ComboBox22.Text = ComboBox30.Items(mres.att(5))
-        ComboBox21.Text = ComboBox29.Items(mres.att(6))
-        ComboBox20.Text = ComboBox28.Items(mres.att(7))
-        'ComboBox19.Text = ComboBox35.Items(mres.att(8))
+        MsgBox(String.Join(" ", mres.att))
+        'ComboBox27.Items = ComboBox35.Items(mres.att(0))
+
+        ComboBox26.Text = mres.att(0)
+        ComboBox25.Text = mres.att(1)
+        ComboBox24.Text = mres.att(2)
+        ComboBox23.Text = mres.att(3)
+        ComboBox22.Text = mres.att(4)
+        ComboBox21.Text = mres.att(5)
+        ComboBox20.Text = mres.att(6)
+        ComboBox19.Text = mres.att(7)
+        ComboBox27.Text = mres.att(8)
 
     End Sub
 
@@ -170,7 +174,11 @@
 
     End Sub
 
-    Private Sub ComboBox26_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox26.SelectedIndexChanged
+    Private Sub ComboBox26_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox25.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
 
     End Sub
 End Class
