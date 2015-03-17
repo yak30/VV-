@@ -24,52 +24,60 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.DGV = New System.Windows.Forms.DataGridView()
         Me.TSexBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New vb_NN.DataSet1()
-        Me.AgeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TAgeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EthnicityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TEthnicityBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BuildDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TBuildBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EducationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TEducationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CitizenshipDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TCitizenshipBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.HobbiesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.THobbiesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FinancialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TFinancialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FamilyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TFamilyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.LikeId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProfileBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.ComboBox27 = New System.Windows.Forms.ComboBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.ComboBox28 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox25 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox19 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox20 = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxYSex = New System.Windows.Forms.ComboBox()
+        Me.TSexBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxMSex = New System.Windows.Forms.ComboBox()
+        Me.TSexBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ButtonTwoWay = New System.Windows.Forms.Button()
+        Me.ButtonOneWay = New System.Windows.Forms.Button()
+        Me.ComboBoxYFamily = New System.Windows.Forms.ComboBox()
+        Me.TFamilyBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxMEthnic = New System.Windows.Forms.ComboBox()
+        Me.TEthnicityBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxMFamily = New System.Windows.Forms.ComboBox()
+        Me.TFamilyBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxMFinancial = New System.Windows.Forms.ComboBox()
+        Me.TFinancialBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox21 = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxMHobbies = New System.Windows.Forms.ComboBox()
+        Me.THobbiesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox22 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox35 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox23 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox34 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox24 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox33 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox32 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox26 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox31 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox30 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox29 = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxMCitizen = New System.Windows.Forms.ComboBox()
+        Me.TCitizenshipBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxYAge = New System.Windows.Forms.ComboBox()
+        Me.TAgeBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxMEdu = New System.Windows.Forms.ComboBox()
+        Me.TEducationBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxYEthnic = New System.Windows.Forms.ComboBox()
+        Me.TEthnicityBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxMBuild = New System.Windows.Forms.ComboBox()
+        Me.TBuildBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxYBuild = New System.Windows.Forms.ComboBox()
+        Me.TBuildBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxYEdu = New System.Windows.Forms.ComboBox()
+        Me.TEducationBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxMAge = New System.Windows.Forms.ComboBox()
+        Me.TAgeBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxYCitizen = New System.Windows.Forms.ComboBox()
+        Me.TCitizenshipBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxYHobbies = New System.Windows.Forms.ComboBox()
+        Me.THobbiesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxYFinancial = New System.Windows.Forms.ComboBox()
+        Me.TFinancialBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.TSexTableAdapter = New vb_NN.DataSet1TableAdapters.TSexTableAdapter()
         Me.TAgeTableAdapter = New vb_NN.DataSet1TableAdapters.TAgeTableAdapter()
         Me.TFinancialTableAdapter = New vb_NN.DataSet1TableAdapters.TFinancialTableAdapter()
@@ -80,61 +88,78 @@ Partial Class Form1
         Me.TFamilyTableAdapter = New vb_NN.DataSet1TableAdapters.TFamilyTableAdapter()
         Me.TBuildTableAdapter = New vb_NN.DataSet1TableAdapters.TBuildTableAdapter()
         Me.ProfileTableAdapter = New vb_NN.DataSet1TableAdapters.ProfileTableAdapter()
-        Me.ComboBox36 = New System.Windows.Forms.ComboBox()
-        Me.Panel1.SuspendLayout
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.TSexBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DataSetBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DataSet1,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.TAgeBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.TEthnicityBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.TBuildBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.TEducationBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.TCitizenshipBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.THobbiesBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.TFinancialBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.TFamilyBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.ProfileBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.Panel2.SuspendLayout
-        Me.SuspendLayout
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.AgeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.EthnicityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.BuildDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.EducationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.CitizenshipDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.HobbiesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.FinancialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.FamilyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
+        Me.LikeIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1.SuspendLayout()
+        CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TSexBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TAgeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TEthnicityBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TBuildBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TEducationBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TCitizenshipBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.THobbiesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TFinancialBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TFamilyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProfileBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.TSexBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TSexBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TFamilyBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TEthnicityBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TFamilyBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TFinancialBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.THobbiesBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TCitizenshipBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TAgeBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TEducationBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TEthnicityBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TBuildBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TBuildBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TEducationBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TAgeBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TCitizenshipBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.THobbiesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TFinancialBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.StatusStrip1.SuspendLayout()
+        Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Location = New System.Drawing.Point(16, 15)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Controls.Add(Me.DGV)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1465, 390)
+        Me.Panel1.Size = New System.Drawing.Size(1108, 317)
         Me.Panel1.TabIndex = 0
         '
-        'DataGridView1
+        'DGV
         '
-        Me.DataGridView1.AutoGenerateColumns = false
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn, Me.AgeDataGridViewTextBoxColumn, Me.EthnicityDataGridViewTextBoxColumn, Me.BuildDataGridViewTextBoxColumn, Me.EducationDataGridViewTextBoxColumn, Me.CitizenshipDataGridViewTextBoxColumn, Me.HobbiesDataGridViewTextBoxColumn, Me.FinancialDataGridViewTextBoxColumn, Me.FamilyDataGridViewTextBoxColumn, Me.LikeId})
-        Me.DataGridView1.DataSource = Me.ProfileBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(8, 78)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1449, 306)
-        Me.DataGridView1.TabIndex = 22
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        '
-        'SexDataGridViewTextBoxColumn
-        '
-        Me.SexDataGridViewTextBoxColumn.DataPropertyName = "Sex"
-        Me.SexDataGridViewTextBoxColumn.DataSource = Me.TSexBindingSource
-        Me.SexDataGridViewTextBoxColumn.DisplayMember = "Sex"
-        Me.SexDataGridViewTextBoxColumn.HeaderText = "Sex"
-        Me.SexDataGridViewTextBoxColumn.Name = "SexDataGridViewTextBoxColumn"
-        Me.SexDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.SexDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.DGV.AutoGenerateColumns = False
+        Me.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn, Me.AgeDataGridViewTextBoxColumn, Me.EthnicityDataGridViewTextBoxColumn, Me.BuildDataGridViewTextBoxColumn, Me.EducationDataGridViewTextBoxColumn, Me.CitizenshipDataGridViewTextBoxColumn, Me.HobbiesDataGridViewTextBoxColumn, Me.FinancialDataGridViewTextBoxColumn, Me.FamilyDataGridViewTextBoxColumn, Me.LikeIdDataGridViewTextBoxColumn})
+        Me.DGV.DataSource = Me.ProfileBindingSource
+        Me.DGV.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DGV.Location = New System.Drawing.Point(0, 0)
+        Me.DGV.Name = "DGV"
+        Me.DGV.Size = New System.Drawing.Size(1106, 315)
+        Me.DGV.TabIndex = 22
         '
         'TSexBindingSource
         '
@@ -151,131 +176,45 @@ Partial Class Form1
         Me.DataSet1.DataSetName = "DataSet1"
         Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'AgeDataGridViewTextBoxColumn
-        '
-        Me.AgeDataGridViewTextBoxColumn.DataPropertyName = "Age"
-        Me.AgeDataGridViewTextBoxColumn.DataSource = Me.TAgeBindingSource
-        Me.AgeDataGridViewTextBoxColumn.DisplayMember = "Age"
-        Me.AgeDataGridViewTextBoxColumn.HeaderText = "Age"
-        Me.AgeDataGridViewTextBoxColumn.Name = "AgeDataGridViewTextBoxColumn"
-        Me.AgeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AgeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
         'TAgeBindingSource
         '
         Me.TAgeBindingSource.DataMember = "TAge"
         Me.TAgeBindingSource.DataSource = Me.DataSetBindingSource
-        '
-        'EthnicityDataGridViewTextBoxColumn
-        '
-        Me.EthnicityDataGridViewTextBoxColumn.DataPropertyName = "Ethnicity"
-        Me.EthnicityDataGridViewTextBoxColumn.DataSource = Me.TEthnicityBindingSource
-        Me.EthnicityDataGridViewTextBoxColumn.DisplayMember = "Ethnicity"
-        Me.EthnicityDataGridViewTextBoxColumn.HeaderText = "Ethnicity"
-        Me.EthnicityDataGridViewTextBoxColumn.Name = "EthnicityDataGridViewTextBoxColumn"
-        Me.EthnicityDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.EthnicityDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'TEthnicityBindingSource
         '
         Me.TEthnicityBindingSource.DataMember = "TEthnicity"
         Me.TEthnicityBindingSource.DataSource = Me.DataSetBindingSource
         '
-        'BuildDataGridViewTextBoxColumn
-        '
-        Me.BuildDataGridViewTextBoxColumn.DataPropertyName = "Build"
-        Me.BuildDataGridViewTextBoxColumn.DataSource = Me.TBuildBindingSource
-        Me.BuildDataGridViewTextBoxColumn.DisplayMember = "Build"
-        Me.BuildDataGridViewTextBoxColumn.HeaderText = "Build"
-        Me.BuildDataGridViewTextBoxColumn.Name = "BuildDataGridViewTextBoxColumn"
-        Me.BuildDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BuildDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
         'TBuildBindingSource
         '
         Me.TBuildBindingSource.DataMember = "TBuild"
         Me.TBuildBindingSource.DataSource = Me.DataSetBindingSource
-        '
-        'EducationDataGridViewTextBoxColumn
-        '
-        Me.EducationDataGridViewTextBoxColumn.DataPropertyName = "Education"
-        Me.EducationDataGridViewTextBoxColumn.DataSource = Me.TEducationBindingSource
-        Me.EducationDataGridViewTextBoxColumn.DisplayMember = "Education"
-        Me.EducationDataGridViewTextBoxColumn.HeaderText = "Education"
-        Me.EducationDataGridViewTextBoxColumn.Name = "EducationDataGridViewTextBoxColumn"
-        Me.EducationDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.EducationDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'TEducationBindingSource
         '
         Me.TEducationBindingSource.DataMember = "TEducation"
         Me.TEducationBindingSource.DataSource = Me.DataSetBindingSource
         '
-        'CitizenshipDataGridViewTextBoxColumn
-        '
-        Me.CitizenshipDataGridViewTextBoxColumn.DataPropertyName = "Citizenship"
-        Me.CitizenshipDataGridViewTextBoxColumn.DataSource = Me.TCitizenshipBindingSource
-        Me.CitizenshipDataGridViewTextBoxColumn.DisplayMember = "Citizenship"
-        Me.CitizenshipDataGridViewTextBoxColumn.HeaderText = "Citizenship"
-        Me.CitizenshipDataGridViewTextBoxColumn.Name = "CitizenshipDataGridViewTextBoxColumn"
-        Me.CitizenshipDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.CitizenshipDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
         'TCitizenshipBindingSource
         '
         Me.TCitizenshipBindingSource.DataMember = "TCitizenship"
         Me.TCitizenshipBindingSource.DataSource = Me.DataSetBindingSource
-        '
-        'HobbiesDataGridViewTextBoxColumn
-        '
-        Me.HobbiesDataGridViewTextBoxColumn.DataPropertyName = "Hobbies"
-        Me.HobbiesDataGridViewTextBoxColumn.DataSource = Me.THobbiesBindingSource
-        Me.HobbiesDataGridViewTextBoxColumn.DisplayMember = "Hobbies"
-        Me.HobbiesDataGridViewTextBoxColumn.HeaderText = "Hobbies"
-        Me.HobbiesDataGridViewTextBoxColumn.Name = "HobbiesDataGridViewTextBoxColumn"
-        Me.HobbiesDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.HobbiesDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'THobbiesBindingSource
         '
         Me.THobbiesBindingSource.DataMember = "THobbies"
         Me.THobbiesBindingSource.DataSource = Me.DataSetBindingSource
         '
-        'FinancialDataGridViewTextBoxColumn
-        '
-        Me.FinancialDataGridViewTextBoxColumn.DataPropertyName = "Financial"
-        Me.FinancialDataGridViewTextBoxColumn.DataSource = Me.TFinancialBindingSource
-        Me.FinancialDataGridViewTextBoxColumn.DisplayMember = "Financial"
-        Me.FinancialDataGridViewTextBoxColumn.HeaderText = "Financial"
-        Me.FinancialDataGridViewTextBoxColumn.Name = "FinancialDataGridViewTextBoxColumn"
-        Me.FinancialDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.FinancialDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
         'TFinancialBindingSource
         '
         Me.TFinancialBindingSource.DataMember = "TFinancial"
         Me.TFinancialBindingSource.DataSource = Me.DataSetBindingSource
         '
-        'FamilyDataGridViewTextBoxColumn
-        '
-        Me.FamilyDataGridViewTextBoxColumn.DataPropertyName = "Family"
-        Me.FamilyDataGridViewTextBoxColumn.DataSource = Me.TFamilyBindingSource
-        Me.FamilyDataGridViewTextBoxColumn.DisplayMember = "Family"
-        Me.FamilyDataGridViewTextBoxColumn.HeaderText = "Family"
-        Me.FamilyDataGridViewTextBoxColumn.Name = "FamilyDataGridViewTextBoxColumn"
-        Me.FamilyDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.FamilyDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
         'TFamilyBindingSource
         '
         Me.TFamilyBindingSource.DataMember = "TFamily"
         Me.TFamilyBindingSource.DataSource = Me.DataSetBindingSource
-        '
-        'LikeId
-        '
-        Me.LikeId.DataPropertyName = "LikeId"
-        Me.LikeId.HeaderText = "LikeId"
-        Me.LikeId.Name = "LikeId"
         '
         'ProfileBindingSource
         '
@@ -284,337 +223,632 @@ Partial Class Form1
         '
         'Panel2
         '
+        Me.Panel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.ComboBox36)
-        Me.Panel2.Controls.Add(Me.ComboBox27)
-        Me.Panel2.Controls.Add(Me.Button4)
-        Me.Panel2.Controls.Add(Me.Button3)
-        Me.Panel2.Controls.Add(Me.ComboBox28)
-        Me.Panel2.Controls.Add(Me.ComboBox25)
-        Me.Panel2.Controls.Add(Me.ComboBox19)
-        Me.Panel2.Controls.Add(Me.ComboBox20)
+        Me.Panel2.Controls.Add(Me.ComboBoxYSex)
+        Me.Panel2.Controls.Add(Me.ComboBoxMSex)
+        Me.Panel2.Controls.Add(Me.ButtonTwoWay)
+        Me.Panel2.Controls.Add(Me.ButtonOneWay)
+        Me.Panel2.Controls.Add(Me.ComboBoxYFamily)
+        Me.Panel2.Controls.Add(Me.ComboBoxMEthnic)
+        Me.Panel2.Controls.Add(Me.ComboBoxMFamily)
+        Me.Panel2.Controls.Add(Me.ComboBoxMFinancial)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.ComboBox21)
+        Me.Panel2.Controls.Add(Me.ComboBoxMHobbies)
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.ComboBox22)
-        Me.Panel2.Controls.Add(Me.ComboBox35)
-        Me.Panel2.Controls.Add(Me.ComboBox23)
-        Me.Panel2.Controls.Add(Me.ComboBox34)
-        Me.Panel2.Controls.Add(Me.ComboBox24)
-        Me.Panel2.Controls.Add(Me.ComboBox33)
-        Me.Panel2.Controls.Add(Me.ComboBox32)
-        Me.Panel2.Controls.Add(Me.ComboBox26)
-        Me.Panel2.Controls.Add(Me.ComboBox31)
-        Me.Panel2.Controls.Add(Me.ComboBox30)
-        Me.Panel2.Controls.Add(Me.ComboBox29)
-        Me.Panel2.Location = New System.Drawing.Point(16, 400)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel2.Controls.Add(Me.ComboBoxMCitizen)
+        Me.Panel2.Controls.Add(Me.ComboBoxYAge)
+        Me.Panel2.Controls.Add(Me.ComboBoxMEdu)
+        Me.Panel2.Controls.Add(Me.ComboBoxYEthnic)
+        Me.Panel2.Controls.Add(Me.ComboBoxMBuild)
+        Me.Panel2.Controls.Add(Me.ComboBoxYBuild)
+        Me.Panel2.Controls.Add(Me.ComboBoxYEdu)
+        Me.Panel2.Controls.Add(Me.ComboBoxMAge)
+        Me.Panel2.Controls.Add(Me.ComboBoxYCitizen)
+        Me.Panel2.Controls.Add(Me.ComboBoxYHobbies)
+        Me.Panel2.Controls.Add(Me.ComboBoxYFinancial)
+        Me.Panel2.Location = New System.Drawing.Point(12, 335)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1465, 78)
+        Me.Panel2.Size = New System.Drawing.Size(1108, 55)
         Me.Panel2.TabIndex = 1
         '
-        'ComboBox27
+        'ComboBoxYSex
         '
-        Me.ComboBox27.FormattingEnabled = true
-        Me.ComboBox27.Location = New System.Drawing.Point(69, 45)
-        Me.ComboBox27.Name = "ComboBox27"
-        Me.ComboBox27.Size = New System.Drawing.Size(85, 24)
-        Me.ComboBox27.TabIndex = 46
+        Me.ComboBoxYSex.DataSource = Me.TSexBindingSource1
+        Me.ComboBoxYSex.DisplayMember = "Sex"
+        Me.ComboBoxYSex.FormattingEnabled = True
+        Me.ComboBoxYSex.Location = New System.Drawing.Point(45, 2)
+        Me.ComboBoxYSex.Margin = New System.Windows.Forms.Padding(2)
+        Me.ComboBoxYSex.Name = "ComboBoxYSex"
+        Me.ComboBoxYSex.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxYSex.TabIndex = 47
+        Me.ComboBoxYSex.ValueMember = "Id"
         '
-        'Button4
+        'TSexBindingSource1
         '
-        Me.Button4.Location = New System.Drawing.Point(1008, 45)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(151, 26)
-        Me.Button4.TabIndex = 45
-        Me.Button4.Text = "Two-way match"
-        Me.Button4.UseVisualStyleBackColor = true
+        Me.TSexBindingSource1.DataMember = "TSex"
+        Me.TSexBindingSource1.DataSource = Me.DataSet1
         '
-        'Button3
+        'ComboBoxMSex
         '
-        Me.Button3.Location = New System.Drawing.Point(1008, 10)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(151, 26)
-        Me.Button3.TabIndex = 44
-        Me.Button3.Text = "Women that want this"
-        Me.Button3.UseVisualStyleBackColor = true
+        Me.ComboBoxMSex.DataSource = Me.TSexBindingSource2
+        Me.ComboBoxMSex.DisplayMember = "Sex"
+        Me.ComboBoxMSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.ComboBoxMSex.Enabled = False
+        Me.ComboBoxMSex.FormattingEnabled = True
+        Me.ComboBoxMSex.Location = New System.Drawing.Point(45, 27)
+        Me.ComboBoxMSex.Margin = New System.Windows.Forms.Padding(2)
+        Me.ComboBoxMSex.Name = "ComboBoxMSex"
+        Me.ComboBoxMSex.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxMSex.TabIndex = 46
+        Me.ComboBoxMSex.ValueMember = "Id"
         '
-        'ComboBox28
+        'TSexBindingSource2
         '
-        Me.ComboBox28.DataSource = Me.TFamilyBindingSource
-        Me.ComboBox28.DisplayMember = "Family"
-        Me.ComboBox28.FormattingEnabled = true
-        Me.ComboBox28.Location = New System.Drawing.Point(895, 11)
-        Me.ComboBox28.Margin = New System.Windows.Forms.Padding(5)
-        Me.ComboBox28.Name = "ComboBox28"
-        Me.ComboBox28.Size = New System.Drawing.Size(104, 24)
-        Me.ComboBox28.TabIndex = 34
+        Me.TSexBindingSource2.DataMember = "TSex"
+        Me.TSexBindingSource2.DataSource = Me.DataSet1
         '
-        'ComboBox25
+        'ButtonTwoWay
         '
-        Me.ComboBox25.FormattingEnabled = true
-        Me.ComboBox25.Location = New System.Drawing.Point(263, 48)
-        Me.ComboBox25.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox25.Name = "ComboBox25"
-        Me.ComboBox25.Size = New System.Drawing.Size(83, 24)
-        Me.ComboBox25.TabIndex = 36
+        Me.ButtonTwoWay.Location = New System.Drawing.Point(1007, 27)
+        Me.ButtonTwoWay.Name = "ButtonTwoWay"
+        Me.ButtonTwoWay.Size = New System.Drawing.Size(96, 21)
+        Me.ButtonTwoWay.TabIndex = 45
+        Me.ButtonTwoWay.Text = "Two-way match"
+        Me.ButtonTwoWay.UseVisualStyleBackColor = True
         '
-        'ComboBox19
+        'ButtonOneWay
         '
-        Me.ComboBox19.FormattingEnabled = true
-        Me.ComboBox19.Location = New System.Drawing.Point(893, 46)
-        Me.ComboBox19.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox19.Name = "ComboBox19"
-        Me.ComboBox19.Size = New System.Drawing.Size(106, 24)
-        Me.ComboBox19.TabIndex = 42
+        Me.ButtonOneWay.Location = New System.Drawing.Point(1007, 2)
+        Me.ButtonOneWay.Name = "ButtonOneWay"
+        Me.ButtonOneWay.Size = New System.Drawing.Size(96, 21)
+        Me.ButtonOneWay.TabIndex = 44
+        Me.ButtonOneWay.Text = "One-way match"
+        Me.ButtonOneWay.UseVisualStyleBackColor = True
         '
-        'ComboBox20
+        'ComboBoxYFamily
         '
-        Me.ComboBox20.FormattingEnabled = true
-        Me.ComboBox20.Location = New System.Drawing.Point(789, 48)
-        Me.ComboBox20.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox20.Name = "ComboBox20"
-        Me.ComboBox20.Size = New System.Drawing.Size(96, 24)
-        Me.ComboBox20.TabIndex = 41
+        Me.ComboBoxYFamily.DataSource = Me.TFamilyBindingSource1
+        Me.ComboBoxYFamily.DisplayMember = "Family"
+        Me.ComboBoxYFamily.FormattingEnabled = True
+        Me.ComboBoxYFamily.Location = New System.Drawing.Point(900, 2)
+        Me.ComboBoxYFamily.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBoxYFamily.Name = "ComboBoxYFamily"
+        Me.ComboBoxYFamily.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxYFamily.TabIndex = 34
+        Me.ComboBoxYFamily.ValueMember = "Id"
+        '
+        'TFamilyBindingSource1
+        '
+        Me.TFamilyBindingSource1.DataMember = "TFamily"
+        Me.TFamilyBindingSource1.DataSource = Me.DataSet1
+        '
+        'ComboBoxMEthnic
+        '
+        Me.ComboBoxMEthnic.DataSource = Me.TEthnicityBindingSource2
+        Me.ComboBoxMEthnic.DisplayMember = "Ethnicity"
+        Me.ComboBoxMEthnic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.ComboBoxMEthnic.Enabled = False
+        Me.ComboBoxMEthnic.FormattingEnabled = True
+        Me.ComboBoxMEthnic.Location = New System.Drawing.Point(256, 27)
+        Me.ComboBoxMEthnic.Name = "ComboBoxMEthnic"
+        Me.ComboBoxMEthnic.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxMEthnic.TabIndex = 36
+        Me.ComboBoxMEthnic.ValueMember = "Id"
+        '
+        'TEthnicityBindingSource2
+        '
+        Me.TEthnicityBindingSource2.DataMember = "TEthnicity"
+        Me.TEthnicityBindingSource2.DataSource = Me.DataSet1
+        '
+        'ComboBoxMFamily
+        '
+        Me.ComboBoxMFamily.DataSource = Me.TFamilyBindingSource2
+        Me.ComboBoxMFamily.DisplayMember = "Family"
+        Me.ComboBoxMFamily.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.ComboBoxMFamily.Enabled = False
+        Me.ComboBoxMFamily.FormattingEnabled = True
+        Me.ComboBoxMFamily.Location = New System.Drawing.Point(900, 27)
+        Me.ComboBoxMFamily.Name = "ComboBoxMFamily"
+        Me.ComboBoxMFamily.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxMFamily.TabIndex = 42
+        Me.ComboBoxMFamily.ValueMember = "Id"
+        '
+        'TFamilyBindingSource2
+        '
+        Me.TFamilyBindingSource2.DataMember = "TFamily"
+        Me.TFamilyBindingSource2.DataSource = Me.DataSet1
+        '
+        'ComboBoxMFinancial
+        '
+        Me.ComboBoxMFinancial.DataSource = Me.TFinancialBindingSource2
+        Me.ComboBoxMFinancial.DisplayMember = "Financial"
+        Me.ComboBoxMFinancial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.ComboBoxMFinancial.Enabled = False
+        Me.ComboBoxMFinancial.FormattingEnabled = True
+        Me.ComboBoxMFinancial.Location = New System.Drawing.Point(792, 27)
+        Me.ComboBoxMFinancial.Name = "ComboBoxMFinancial"
+        Me.ComboBoxMFinancial.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxMFinancial.TabIndex = 41
+        Me.ComboBoxMFinancial.ValueMember = "Id"
+        '
+        'TFinancialBindingSource2
+        '
+        Me.TFinancialBindingSource2.DataMember = "TFinancial"
+        Me.TFinancialBindingSource2.DataSource = Me.DataSet1
         '
         'Label4
         '
-        Me.Label4.AutoSize = true
-        Me.Label4.Location = New System.Drawing.Point(4, 12)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(3, 5)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(33, 17)
+        Me.Label4.Size = New System.Drawing.Size(26, 13)
         Me.Label4.TabIndex = 25
         Me.Label4.Text = "You"
         '
-        'ComboBox21
+        'ComboBoxMHobbies
         '
-        Me.ComboBox21.FormattingEnabled = true
-        Me.ComboBox21.Location = New System.Drawing.Point(677, 45)
-        Me.ComboBox21.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox21.Name = "ComboBox21"
-        Me.ComboBox21.Size = New System.Drawing.Size(102, 24)
-        Me.ComboBox21.TabIndex = 40
+        Me.ComboBoxMHobbies.DataSource = Me.THobbiesBindingSource2
+        Me.ComboBoxMHobbies.DisplayMember = "Hobbies"
+        Me.ComboBoxMHobbies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.ComboBoxMHobbies.Enabled = False
+        Me.ComboBoxMHobbies.FormattingEnabled = True
+        Me.ComboBoxMHobbies.Location = New System.Drawing.Point(684, 27)
+        Me.ComboBoxMHobbies.Name = "ComboBoxMHobbies"
+        Me.ComboBoxMHobbies.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxMHobbies.TabIndex = 40
+        Me.ComboBoxMHobbies.ValueMember = "Id"
+        '
+        'THobbiesBindingSource2
+        '
+        Me.THobbiesBindingSource2.DataMember = "THobbies"
+        Me.THobbiesBindingSource2.DataSource = Me.DataSet1
         '
         'Label3
         '
-        Me.Label3.AutoSize = true
-        Me.Label3.Location = New System.Drawing.Point(4, 46)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(3, 30)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(46, 17)
+        Me.Label3.Size = New System.Drawing.Size(37, 13)
         Me.Label3.TabIndex = 26
         Me.Label3.Text = "Match"
         '
-        'ComboBox22
+        'ComboBoxMCitizen
         '
-        Me.ComboBox22.FormattingEnabled = true
-        Me.ComboBox22.Location = New System.Drawing.Point(561, 46)
-        Me.ComboBox22.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox22.Name = "ComboBox22"
-        Me.ComboBox22.Size = New System.Drawing.Size(106, 24)
-        Me.ComboBox22.TabIndex = 39
+        Me.ComboBoxMCitizen.DataSource = Me.TCitizenshipBindingSource2
+        Me.ComboBoxMCitizen.DisplayMember = "Citizenship"
+        Me.ComboBoxMCitizen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.ComboBoxMCitizen.Enabled = False
+        Me.ComboBoxMCitizen.FormattingEnabled = True
+        Me.ComboBoxMCitizen.Location = New System.Drawing.Point(576, 27)
+        Me.ComboBoxMCitizen.Name = "ComboBoxMCitizen"
+        Me.ComboBoxMCitizen.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxMCitizen.TabIndex = 39
+        Me.ComboBoxMCitizen.ValueMember = "Id"
         '
-        'ComboBox35
+        'TCitizenshipBindingSource2
         '
-        Me.ComboBox35.DataSource = Me.TAgeBindingSource
-        Me.ComboBox35.DisplayMember = "Age"
-        Me.ComboBox35.FormattingEnabled = true
-        Me.ComboBox35.Location = New System.Drawing.Point(162, 13)
-        Me.ComboBox35.Margin = New System.Windows.Forms.Padding(5)
-        Me.ComboBox35.Name = "ComboBox35"
-        Me.ComboBox35.Size = New System.Drawing.Size(91, 24)
-        Me.ComboBox35.TabIndex = 27
+        Me.TCitizenshipBindingSource2.DataMember = "TCitizenship"
+        Me.TCitizenshipBindingSource2.DataSource = Me.DataSet1
         '
-        'ComboBox23
+        'ComboBoxYAge
         '
-        Me.ComboBox23.FormattingEnabled = true
-        Me.ComboBox23.Location = New System.Drawing.Point(455, 46)
-        Me.ComboBox23.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox23.Name = "ComboBox23"
-        Me.ComboBox23.Size = New System.Drawing.Size(98, 24)
-        Me.ComboBox23.TabIndex = 38
+        Me.ComboBoxYAge.DataSource = Me.TAgeBindingSource1
+        Me.ComboBoxYAge.DisplayMember = "Age"
+        Me.ComboBoxYAge.FormattingEnabled = True
+        Me.ComboBoxYAge.Location = New System.Drawing.Point(150, 2)
+        Me.ComboBoxYAge.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBoxYAge.Name = "ComboBoxYAge"
+        Me.ComboBoxYAge.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxYAge.TabIndex = 27
+        Me.ComboBoxYAge.ValueMember = "Id"
         '
-        'ComboBox34
+        'TAgeBindingSource1
         '
-        Me.ComboBox34.DataSource = Me.TEthnicityBindingSource
-        Me.ComboBox34.DisplayMember = "Ethnicity"
-        Me.ComboBox34.FormattingEnabled = true
-        Me.ComboBox34.Location = New System.Drawing.Point(263, 13)
-        Me.ComboBox34.Margin = New System.Windows.Forms.Padding(5)
-        Me.ComboBox34.Name = "ComboBox34"
-        Me.ComboBox34.Size = New System.Drawing.Size(83, 24)
-        Me.ComboBox34.TabIndex = 28
+        Me.TAgeBindingSource1.DataMember = "TAge"
+        Me.TAgeBindingSource1.DataSource = Me.DataSet1
         '
-        'ComboBox24
+        'ComboBoxMEdu
         '
-        Me.ComboBox24.FormattingEnabled = true
-        Me.ComboBox24.Location = New System.Drawing.Point(356, 46)
-        Me.ComboBox24.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox24.Name = "ComboBox24"
-        Me.ComboBox24.Size = New System.Drawing.Size(89, 24)
-        Me.ComboBox24.TabIndex = 37
+        Me.ComboBoxMEdu.DataSource = Me.TEducationBindingSource2
+        Me.ComboBoxMEdu.DisplayMember = "Education"
+        Me.ComboBoxMEdu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.ComboBoxMEdu.Enabled = False
+        Me.ComboBoxMEdu.FormattingEnabled = True
+        Me.ComboBoxMEdu.Location = New System.Drawing.Point(468, 27)
+        Me.ComboBoxMEdu.Name = "ComboBoxMEdu"
+        Me.ComboBoxMEdu.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxMEdu.TabIndex = 38
+        Me.ComboBoxMEdu.ValueMember = "Id"
         '
-        'ComboBox33
+        'TEducationBindingSource2
         '
-        Me.ComboBox33.DataSource = Me.TBuildBindingSource
-        Me.ComboBox33.DisplayMember = "Build"
-        Me.ComboBox33.FormattingEnabled = true
-        Me.ComboBox33.Location = New System.Drawing.Point(356, 13)
-        Me.ComboBox33.Margin = New System.Windows.Forms.Padding(5)
-        Me.ComboBox33.Name = "ComboBox33"
-        Me.ComboBox33.Size = New System.Drawing.Size(89, 24)
-        Me.ComboBox33.TabIndex = 29
+        Me.TEducationBindingSource2.DataMember = "TEducation"
+        Me.TEducationBindingSource2.DataSource = Me.DataSet1
         '
-        'ComboBox32
+        'ComboBoxYEthnic
         '
-        Me.ComboBox32.DataSource = Me.TEducationBindingSource
-        Me.ComboBox32.DisplayMember = "Education"
-        Me.ComboBox32.FormattingEnabled = true
-        Me.ComboBox32.Location = New System.Drawing.Point(455, 13)
-        Me.ComboBox32.Margin = New System.Windows.Forms.Padding(5)
-        Me.ComboBox32.Name = "ComboBox32"
-        Me.ComboBox32.Size = New System.Drawing.Size(98, 24)
-        Me.ComboBox32.TabIndex = 30
+        Me.ComboBoxYEthnic.DataSource = Me.TEthnicityBindingSource1
+        Me.ComboBoxYEthnic.DisplayMember = "Ethnicity"
+        Me.ComboBoxYEthnic.FormattingEnabled = True
+        Me.ComboBoxYEthnic.Location = New System.Drawing.Point(256, 2)
+        Me.ComboBoxYEthnic.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBoxYEthnic.Name = "ComboBoxYEthnic"
+        Me.ComboBoxYEthnic.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxYEthnic.TabIndex = 28
+        Me.ComboBoxYEthnic.ValueMember = "Id"
         '
-        'ComboBox26
+        'TEthnicityBindingSource1
         '
-        Me.ComboBox26.FormattingEnabled = true
-        Me.ComboBox26.Location = New System.Drawing.Point(162, 46)
-        Me.ComboBox26.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox26.Name = "ComboBox26"
-        Me.ComboBox26.Size = New System.Drawing.Size(91, 24)
-        Me.ComboBox26.TabIndex = 35
+        Me.TEthnicityBindingSource1.DataMember = "TEthnicity"
+        Me.TEthnicityBindingSource1.DataSource = Me.DataSet1
         '
-        'ComboBox31
+        'ComboBoxMBuild
         '
-        Me.ComboBox31.DataSource = Me.TCitizenshipBindingSource
-        Me.ComboBox31.DisplayMember = "Citizenship"
-        Me.ComboBox31.FormattingEnabled = true
-        Me.ComboBox31.Location = New System.Drawing.Point(561, 12)
-        Me.ComboBox31.Margin = New System.Windows.Forms.Padding(5)
-        Me.ComboBox31.Name = "ComboBox31"
-        Me.ComboBox31.Size = New System.Drawing.Size(106, 24)
-        Me.ComboBox31.TabIndex = 31
+        Me.ComboBoxMBuild.DataSource = Me.TBuildBindingSource2
+        Me.ComboBoxMBuild.DisplayMember = "Build"
+        Me.ComboBoxMBuild.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.ComboBoxMBuild.Enabled = False
+        Me.ComboBoxMBuild.FormattingEnabled = True
+        Me.ComboBoxMBuild.Location = New System.Drawing.Point(362, 27)
+        Me.ComboBoxMBuild.Name = "ComboBoxMBuild"
+        Me.ComboBoxMBuild.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxMBuild.TabIndex = 37
+        Me.ComboBoxMBuild.ValueMember = "Id"
         '
-        'ComboBox30
+        'TBuildBindingSource2
         '
-        Me.ComboBox30.DataSource = Me.THobbiesBindingSource
-        Me.ComboBox30.DisplayMember = "Hobbies"
-        Me.ComboBox30.FormattingEnabled = true
-        Me.ComboBox30.Location = New System.Drawing.Point(677, 12)
-        Me.ComboBox30.Margin = New System.Windows.Forms.Padding(5)
-        Me.ComboBox30.Name = "ComboBox30"
-        Me.ComboBox30.Size = New System.Drawing.Size(102, 24)
-        Me.ComboBox30.TabIndex = 32
+        Me.TBuildBindingSource2.DataMember = "TBuild"
+        Me.TBuildBindingSource2.DataSource = Me.DataSet1
         '
-        'ComboBox29
+        'ComboBoxYBuild
         '
-        Me.ComboBox29.DataSource = Me.TFinancialBindingSource
-        Me.ComboBox29.DisplayMember = "Financial"
-        Me.ComboBox29.FormattingEnabled = true
-        Me.ComboBox29.Location = New System.Drawing.Point(789, 11)
-        Me.ComboBox29.Margin = New System.Windows.Forms.Padding(5)
-        Me.ComboBox29.Name = "ComboBox29"
-        Me.ComboBox29.Size = New System.Drawing.Size(96, 24)
-        Me.ComboBox29.TabIndex = 33
+        Me.ComboBoxYBuild.DataSource = Me.TBuildBindingSource1
+        Me.ComboBoxYBuild.DisplayMember = "Build"
+        Me.ComboBoxYBuild.FormattingEnabled = True
+        Me.ComboBoxYBuild.Location = New System.Drawing.Point(362, 2)
+        Me.ComboBoxYBuild.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBoxYBuild.Name = "ComboBoxYBuild"
+        Me.ComboBoxYBuild.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxYBuild.TabIndex = 29
+        Me.ComboBoxYBuild.ValueMember = "Id"
+        '
+        'TBuildBindingSource1
+        '
+        Me.TBuildBindingSource1.DataMember = "TBuild"
+        Me.TBuildBindingSource1.DataSource = Me.DataSet1
+        '
+        'ComboBoxYEdu
+        '
+        Me.ComboBoxYEdu.DataSource = Me.TEducationBindingSource1
+        Me.ComboBoxYEdu.DisplayMember = "Education"
+        Me.ComboBoxYEdu.FormattingEnabled = True
+        Me.ComboBoxYEdu.Location = New System.Drawing.Point(468, 2)
+        Me.ComboBoxYEdu.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBoxYEdu.Name = "ComboBoxYEdu"
+        Me.ComboBoxYEdu.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxYEdu.TabIndex = 30
+        Me.ComboBoxYEdu.ValueMember = "Id"
+        '
+        'TEducationBindingSource1
+        '
+        Me.TEducationBindingSource1.DataMember = "TEducation"
+        Me.TEducationBindingSource1.DataSource = Me.DataSet1
+        '
+        'ComboBoxMAge
+        '
+        Me.ComboBoxMAge.DataSource = Me.TAgeBindingSource2
+        Me.ComboBoxMAge.DisplayMember = "Age"
+        Me.ComboBoxMAge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.ComboBoxMAge.Enabled = False
+        Me.ComboBoxMAge.FormattingEnabled = True
+        Me.ComboBoxMAge.Location = New System.Drawing.Point(150, 27)
+        Me.ComboBoxMAge.Name = "ComboBoxMAge"
+        Me.ComboBoxMAge.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxMAge.TabIndex = 35
+        Me.ComboBoxMAge.ValueMember = "Id"
+        '
+        'TAgeBindingSource2
+        '
+        Me.TAgeBindingSource2.DataMember = "TAge"
+        Me.TAgeBindingSource2.DataSource = Me.DataSet1
+        '
+        'ComboBoxYCitizen
+        '
+        Me.ComboBoxYCitizen.DataSource = Me.TCitizenshipBindingSource1
+        Me.ComboBoxYCitizen.DisplayMember = "Citizenship"
+        Me.ComboBoxYCitizen.FormattingEnabled = True
+        Me.ComboBoxYCitizen.Location = New System.Drawing.Point(576, 2)
+        Me.ComboBoxYCitizen.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBoxYCitizen.Name = "ComboBoxYCitizen"
+        Me.ComboBoxYCitizen.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxYCitizen.TabIndex = 31
+        Me.ComboBoxYCitizen.ValueMember = "Id"
+        '
+        'TCitizenshipBindingSource1
+        '
+        Me.TCitizenshipBindingSource1.DataMember = "TCitizenship"
+        Me.TCitizenshipBindingSource1.DataSource = Me.DataSet1
+        '
+        'ComboBoxYHobbies
+        '
+        Me.ComboBoxYHobbies.DataSource = Me.THobbiesBindingSource1
+        Me.ComboBoxYHobbies.DisplayMember = "Hobbies"
+        Me.ComboBoxYHobbies.FormattingEnabled = True
+        Me.ComboBoxYHobbies.Location = New System.Drawing.Point(684, 2)
+        Me.ComboBoxYHobbies.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBoxYHobbies.Name = "ComboBoxYHobbies"
+        Me.ComboBoxYHobbies.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxYHobbies.TabIndex = 32
+        Me.ComboBoxYHobbies.ValueMember = "Id"
+        '
+        'THobbiesBindingSource1
+        '
+        Me.THobbiesBindingSource1.DataMember = "THobbies"
+        Me.THobbiesBindingSource1.DataSource = Me.DataSet1
+        '
+        'ComboBoxYFinancial
+        '
+        Me.ComboBoxYFinancial.DataSource = Me.TFinancialBindingSource1
+        Me.ComboBoxYFinancial.DisplayMember = "Financial"
+        Me.ComboBoxYFinancial.FormattingEnabled = True
+        Me.ComboBoxYFinancial.Location = New System.Drawing.Point(792, 2)
+        Me.ComboBoxYFinancial.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBoxYFinancial.Name = "ComboBoxYFinancial"
+        Me.ComboBoxYFinancial.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBoxYFinancial.TabIndex = 33
+        Me.ComboBoxYFinancial.ValueMember = "Id"
+        '
+        'TFinancialBindingSource1
+        '
+        Me.TFinancialBindingSource1.DataMember = "TFinancial"
+        Me.TFinancialBindingSource1.DataSource = Me.DataSet1
         '
         'TSexTableAdapter
         '
-        Me.TSexTableAdapter.ClearBeforeFill = true
+        Me.TSexTableAdapter.ClearBeforeFill = True
         '
         'TAgeTableAdapter
         '
-        Me.TAgeTableAdapter.ClearBeforeFill = true
+        Me.TAgeTableAdapter.ClearBeforeFill = True
         '
         'TFinancialTableAdapter
         '
-        Me.TFinancialTableAdapter.ClearBeforeFill = true
+        Me.TFinancialTableAdapter.ClearBeforeFill = True
         '
         'TEducationTableAdapter
         '
-        Me.TEducationTableAdapter.ClearBeforeFill = true
+        Me.TEducationTableAdapter.ClearBeforeFill = True
         '
         'TEthnicityTableAdapter
         '
-        Me.TEthnicityTableAdapter.ClearBeforeFill = true
+        Me.TEthnicityTableAdapter.ClearBeforeFill = True
         '
         'THobbiesTableAdapter
         '
-        Me.THobbiesTableAdapter.ClearBeforeFill = true
+        Me.THobbiesTableAdapter.ClearBeforeFill = True
         '
         'TCitizenshipTableAdapter
         '
-        Me.TCitizenshipTableAdapter.ClearBeforeFill = true
+        Me.TCitizenshipTableAdapter.ClearBeforeFill = True
         '
         'TFamilyTableAdapter
         '
-        Me.TFamilyTableAdapter.ClearBeforeFill = true
+        Me.TFamilyTableAdapter.ClearBeforeFill = True
         '
         'TBuildTableAdapter
         '
-        Me.TBuildTableAdapter.ClearBeforeFill = true
+        Me.TBuildTableAdapter.ClearBeforeFill = True
         '
         'ProfileTableAdapter
         '
-        Me.ProfileTableAdapter.ClearBeforeFill = true
+        Me.ProfileTableAdapter.ClearBeforeFill = True
         '
-        'ComboBox36
+        'StatusStrip1
         '
-        Me.ComboBox36.DataSource = Me.TSexBindingSource
-        Me.ComboBox36.DisplayMember = "Sex"
-        Me.ComboBox36.FormattingEnabled = true
-        Me.ComboBox36.Location = New System.Drawing.Point(69, 13)
-        Me.ComboBox36.Name = "ComboBox36"
-        Me.ComboBox36.Size = New System.Drawing.Size(85, 24)
-        Me.ComboBox36.TabIndex = 47
-        Me.ComboBox36.ValueMember = "Sex"
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 393)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1124, 22)
+        Me.StatusStrip1.TabIndex = 2
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(0, 17)
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.FillWeight = 50.0!
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdDataGridViewTextBoxColumn.Width = 50
+        '
+        'SexDataGridViewTextBoxColumn
+        '
+        Me.SexDataGridViewTextBoxColumn.DataPropertyName = "Sex"
+        Me.SexDataGridViewTextBoxColumn.DataSource = Me.TSexBindingSource
+        Me.SexDataGridViewTextBoxColumn.DisplayMember = "Sex"
+        Me.SexDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.SexDataGridViewTextBoxColumn.HeaderText = "Sex"
+        Me.SexDataGridViewTextBoxColumn.Name = "SexDataGridViewTextBoxColumn"
+        Me.SexDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SexDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.SexDataGridViewTextBoxColumn.ValueMember = "Sex"
+        '
+        'AgeDataGridViewTextBoxColumn
+        '
+        Me.AgeDataGridViewTextBoxColumn.DataPropertyName = "Age"
+        Me.AgeDataGridViewTextBoxColumn.DataSource = Me.TAgeBindingSource
+        Me.AgeDataGridViewTextBoxColumn.DisplayMember = "Age"
+        Me.AgeDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.AgeDataGridViewTextBoxColumn.HeaderText = "Age"
+        Me.AgeDataGridViewTextBoxColumn.Name = "AgeDataGridViewTextBoxColumn"
+        Me.AgeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AgeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.AgeDataGridViewTextBoxColumn.ValueMember = "Age"
+        '
+        'EthnicityDataGridViewTextBoxColumn
+        '
+        Me.EthnicityDataGridViewTextBoxColumn.DataPropertyName = "Ethnicity"
+        Me.EthnicityDataGridViewTextBoxColumn.DataSource = Me.TEthnicityBindingSource
+        Me.EthnicityDataGridViewTextBoxColumn.DisplayMember = "Ethnicity"
+        Me.EthnicityDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.EthnicityDataGridViewTextBoxColumn.HeaderText = "Ethnicity"
+        Me.EthnicityDataGridViewTextBoxColumn.Name = "EthnicityDataGridViewTextBoxColumn"
+        Me.EthnicityDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.EthnicityDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.EthnicityDataGridViewTextBoxColumn.ValueMember = "Ethnicity"
+        '
+        'BuildDataGridViewTextBoxColumn
+        '
+        Me.BuildDataGridViewTextBoxColumn.DataPropertyName = "Build"
+        Me.BuildDataGridViewTextBoxColumn.DataSource = Me.TBuildBindingSource
+        Me.BuildDataGridViewTextBoxColumn.DisplayMember = "Build"
+        Me.BuildDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.BuildDataGridViewTextBoxColumn.HeaderText = "Build"
+        Me.BuildDataGridViewTextBoxColumn.Name = "BuildDataGridViewTextBoxColumn"
+        Me.BuildDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BuildDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.BuildDataGridViewTextBoxColumn.ValueMember = "Build"
+        '
+        'EducationDataGridViewTextBoxColumn
+        '
+        Me.EducationDataGridViewTextBoxColumn.DataPropertyName = "Education"
+        Me.EducationDataGridViewTextBoxColumn.DataSource = Me.TEducationBindingSource
+        Me.EducationDataGridViewTextBoxColumn.DisplayMember = "Education"
+        Me.EducationDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.EducationDataGridViewTextBoxColumn.HeaderText = "Education"
+        Me.EducationDataGridViewTextBoxColumn.Name = "EducationDataGridViewTextBoxColumn"
+        Me.EducationDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.EducationDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.EducationDataGridViewTextBoxColumn.ValueMember = "Education"
+        '
+        'CitizenshipDataGridViewTextBoxColumn
+        '
+        Me.CitizenshipDataGridViewTextBoxColumn.DataPropertyName = "Citizenship"
+        Me.CitizenshipDataGridViewTextBoxColumn.DataSource = Me.TCitizenshipBindingSource
+        Me.CitizenshipDataGridViewTextBoxColumn.DisplayMember = "Citizenship"
+        Me.CitizenshipDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.CitizenshipDataGridViewTextBoxColumn.HeaderText = "Citizenship"
+        Me.CitizenshipDataGridViewTextBoxColumn.Name = "CitizenshipDataGridViewTextBoxColumn"
+        Me.CitizenshipDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CitizenshipDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.CitizenshipDataGridViewTextBoxColumn.ValueMember = "Citizenship"
+        '
+        'HobbiesDataGridViewTextBoxColumn
+        '
+        Me.HobbiesDataGridViewTextBoxColumn.DataPropertyName = "Hobbies"
+        Me.HobbiesDataGridViewTextBoxColumn.DataSource = Me.THobbiesBindingSource
+        Me.HobbiesDataGridViewTextBoxColumn.DisplayMember = "Hobbies"
+        Me.HobbiesDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.HobbiesDataGridViewTextBoxColumn.FillWeight = 140.0!
+        Me.HobbiesDataGridViewTextBoxColumn.HeaderText = "Hobbies"
+        Me.HobbiesDataGridViewTextBoxColumn.Name = "HobbiesDataGridViewTextBoxColumn"
+        Me.HobbiesDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.HobbiesDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.HobbiesDataGridViewTextBoxColumn.ValueMember = "Hobbies"
+        Me.HobbiesDataGridViewTextBoxColumn.Width = 140
+        '
+        'FinancialDataGridViewTextBoxColumn
+        '
+        Me.FinancialDataGridViewTextBoxColumn.DataPropertyName = "Financial"
+        Me.FinancialDataGridViewTextBoxColumn.DataSource = Me.TFinancialBindingSource
+        Me.FinancialDataGridViewTextBoxColumn.DisplayMember = "Financial"
+        Me.FinancialDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.FinancialDataGridViewTextBoxColumn.HeaderText = "Financial"
+        Me.FinancialDataGridViewTextBoxColumn.Name = "FinancialDataGridViewTextBoxColumn"
+        Me.FinancialDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.FinancialDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.FinancialDataGridViewTextBoxColumn.ValueMember = "Financial"
+        '
+        'FamilyDataGridViewTextBoxColumn
+        '
+        Me.FamilyDataGridViewTextBoxColumn.DataPropertyName = "Family"
+        Me.FamilyDataGridViewTextBoxColumn.DataSource = Me.TFamilyBindingSource
+        Me.FamilyDataGridViewTextBoxColumn.DisplayMember = "Family"
+        Me.FamilyDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.FamilyDataGridViewTextBoxColumn.HeaderText = "Family"
+        Me.FamilyDataGridViewTextBoxColumn.Name = "FamilyDataGridViewTextBoxColumn"
+        Me.FamilyDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.FamilyDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.FamilyDataGridViewTextBoxColumn.ValueMember = "Family"
+        '
+        'LikeIdDataGridViewTextBoxColumn
+        '
+        Me.LikeIdDataGridViewTextBoxColumn.DataPropertyName = "LikeId"
+        Me.LikeIdDataGridViewTextBoxColumn.FillWeight = 50.0!
+        Me.LikeIdDataGridViewTextBoxColumn.HeaderText = "Likes"
+        Me.LikeIdDataGridViewTextBoxColumn.Name = "LikeIdDataGridViewTextBoxColumn"
+        Me.LikeIdDataGridViewTextBoxColumn.Width = 50
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8!, 16!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1354, 604)
+        Me.ClientSize = New System.Drawing.Size(1124, 415)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Neural Networks Project"
-        Me.Panel1.ResumeLayout(false)
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.TSexBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DataSetBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DataSet1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.TAgeBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.TEthnicityBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.TBuildBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.TEducationBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.TCitizenshipBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.THobbiesBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.TFinancialBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.TFamilyBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.ProfileBindingSource,System.ComponentModel.ISupportInitialize).EndInit
-        Me.Panel2.ResumeLayout(false)
-        Me.Panel2.PerformLayout
-        Me.ResumeLayout(false)
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.DGV, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TSexBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TAgeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TEthnicityBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TBuildBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TEducationBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TCitizenshipBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.THobbiesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TFinancialBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TFamilyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProfileBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.TSexBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TSexBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TFamilyBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TEthnicityBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TFamilyBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TFinancialBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.THobbiesBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TCitizenshipBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TAgeBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TEducationBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TEthnicityBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TBuildBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TBuildBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TEducationBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TAgeBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TCitizenshipBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.THobbiesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TFinancialBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
 
-End Sub
+    End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents ButtonTwoWay As System.Windows.Forms.Button
+    Friend WithEvents ButtonOneWay As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox35 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox34 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox33 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox32 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox31 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox28 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox30 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox29 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxYAge As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxYEthnic As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxYBuild As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxYEdu As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxYCitizen As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxYFamily As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxYHobbies As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxYFinancial As System.Windows.Forms.ComboBox
     Friend WithEvents DataSet1 As vb_NN.DataSet1
     Friend WithEvents TSexBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents TSexTableAdapter As vb_NN.DataSet1TableAdapters.TSexTableAdapter
@@ -635,9 +869,39 @@ End Sub
     Friend WithEvents TBuildBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents TBuildTableAdapter As vb_NN.DataSet1TableAdapters.TBuildTableAdapter
     Friend WithEvents DataSetBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents DGV As System.Windows.Forms.DataGridView
     Friend WithEvents ProfileBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ProfileTableAdapter As vb_NN.DataSet1TableAdapters.ProfileTableAdapter
+    Friend WithEvents ComboBoxMEthnic As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxMFamily As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxMFinancial As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxMHobbies As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxMCitizen As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxMEdu As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxMBuild As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxMAge As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxMSex As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBoxYSex As System.Windows.Forms.ComboBox
+    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents TSexBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents TSexBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents TAgeBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents TFamilyBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents TEthnicityBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents TFamilyBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents TFinancialBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents THobbiesBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents TCitizenshipBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents TEducationBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents TEthnicityBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents TBuildBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents TBuildBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents TEducationBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents TAgeBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents TCitizenshipBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents THobbiesBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents TFinancialBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents IdDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents SexDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents AgeDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
@@ -648,16 +912,6 @@ End Sub
     Friend WithEvents HobbiesDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents FinancialDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents FamilyDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
-    Friend WithEvents LikeId As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ComboBox25 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox19 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox20 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox21 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox22 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox23 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox24 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox26 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox27 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox36 As System.Windows.Forms.ComboBox
+    Friend WithEvents LikeIdDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
 
 End Class

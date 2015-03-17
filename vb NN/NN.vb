@@ -31,7 +31,7 @@
         'construct A and B from network
         Dim i = 0 'examples
         For Each ex In examples
-            feed(ex.person, ex.likes)
+            feed(ex.from, ex.match_to)
             Dim j = 0
             For Each n In neurons.Take(dims)
                 A(i, j) = n.val
