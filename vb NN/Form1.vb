@@ -102,18 +102,45 @@
         ExList.Add(exp5)
 
     End Sub
+    Private Function to_id(col As Integer, row As DataGridViewRow) As Integer
+        Dim q = From r As DataRowView In CType(DGV.Columns(col), DataGridViewComboBoxColumn).Items
+                        Where r.Item(0) = row.Cells(col).Value
+                        Select r.Item(1)
+        Return q.First()
+    End Function
+
     Private Sub populate()
         Plist.Clear()
         For Each row As DataGridViewRow In DGV.Rows
             If row.IsNewRow Then Exit For
             Dim p As New Profile
             For col = 1 To DGV.Columns.Count - 2
-                Dim q = From r As DataRowView In CType(DGV.Columns(col), DataGridViewComboBoxColumn).Items
-                        Where r.Item(0) = row.Cells(col).Value
-                        Select r.Item(1)
-                p.att(col - 1) = q.First()
+                p.att(col - 1) = to_id(col, row)
             Next
             Plist.Add(p)
+        Next
+    End Sub
+    Private Sub highlight_matches(p As Profile)
+        For Each row As DataGridViewRow In DGV.Rows
+            If row.IsNewRow Then Exit For
+            Dim off = 0
+            For col = 1 To DGV.Columns.Count - 2
+                If p.att(col - 1) <> to_id(col, row) Then off = off + 1
+            Next
+            With row.DefaultCellStyle
+                Select Case off
+                    Case 0, 1
+                        .BackColor = Color.DarkGreen
+                    Case 2
+                        .BackColor = Color.ForestGreen
+                    Case 3
+                        .BackColor = Color.MediumSeaGreen
+                    Case 4
+                        .BackColor = Color.PaleGreen
+                    Case Else
+                        .BackColor = Color.Empty
+                End Select
+            End With
         Next
     End Sub
     Private Sub ButtonOneWay_Click(sender As Object, e As EventArgs) Handles ButtonOneWay.Click
@@ -147,8 +174,7 @@
         End With
 
         Dim mres = oneway.match(you)
-        'TODO: color green
-
+        highlight_matches(mres)
         MsgBox(String.Join(" ", mres.att))
 
         'ComboBoxMSex.SelectedIndex = mres.att(0)
@@ -163,6 +189,9 @@
 
     End Sub
 
+    Private Sub ButtonTwoWay_Click(sender As Object, e As EventArgs) Handles ButtonTwoWay.Click
+
+    End Sub
 
     Private Sub ButtonOneWay_MouseMove(sender As Object, e As MouseEventArgs) Handles ButtonOneWay.MouseMove
         ToolStripStatusLabel1.Text = "This button will match members who are interested in your profile to you."
@@ -172,7 +201,27 @@
         ToolStripStatusLabel1.Text = "This button will match you with members who are interesting to you and who are interested in your profile."
     End Sub
 
-    Private Sub ButtonTwoWay_Click(sender As Object, e As EventArgs) Handles ButtonTwoWay.Click
+
+    Private Sub DGV_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV.CellMouseDoubleClick
+        Dim s As DataGridView = sender
+        If s.CurrentCell.OwningColumn.Name = "IdDataGridViewTextBoxColumn" Then
+            Dim row = s.CurrentCell.OwningRow
+            ComboBoxYSex.SelectedValue = to_id(1, row)
+            ComboBoxYAge.SelectedValue = to_id(2, row)
+            ComboBoxYEthnic.SelectedValue = to_id(3, row)
+            ComboBoxYBuild.SelectedValue = to_id(4, row)
+            ComboBoxYEdu.SelectedValue = to_id(5, row)
+            ComboBoxYCitizen.SelectedValue = to_id(6, row)
+            ComboBoxYHobbies.SelectedValue = to_id(7, row)
+            ComboBoxYFinancial.SelectedValue = to_id(8, row)
+            ComboBoxYFamily.SelectedValue = to_id(9, row)
+
+        End If
+    End Sub
+
+    Private Sub DGV_CellMouseMove(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV.CellMouseMove
+        ToolStripStatusLabel1.Text = "Double click on the Id column to use a saved profile for matching." +
+            " Matched Ids will be colored dark green to light green for best to worst, respectively."
 
     End Sub
 End Class

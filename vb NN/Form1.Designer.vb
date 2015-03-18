@@ -25,17 +25,28 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DGV = New System.Windows.Forms.DataGridView()
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TSexBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New vb_NN.DataSet1()
+        Me.AgeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TAgeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EthnicityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TEthnicityBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BuildDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TBuildBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.EducationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TEducationBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CitizenshipDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TCitizenshipBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HobbiesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.THobbiesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FinancialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TFinancialBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FamilyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
         Me.TFamilyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LikeIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProfileBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.ComboBoxYSex = New System.Windows.Forms.ComboBox()
@@ -90,17 +101,6 @@ Partial Class Form1
         Me.ProfileTableAdapter = New vb_NN.DataSet1TableAdapters.ProfileTableAdapter()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SexDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.AgeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.EthnicityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.BuildDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.EducationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.CitizenshipDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.HobbiesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.FinancialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.FamilyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewComboBoxColumn()
-        Me.LikeIdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TSexBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -151,6 +151,8 @@ Partial Class Form1
         '
         'DGV
         '
+        Me.DGV.AllowUserToResizeColumns = False
+        Me.DGV.AllowUserToResizeRows = False
         Me.DGV.AutoGenerateColumns = False
         Me.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.SexDataGridViewTextBoxColumn, Me.AgeDataGridViewTextBoxColumn, Me.EthnicityDataGridViewTextBoxColumn, Me.BuildDataGridViewTextBoxColumn, Me.EducationDataGridViewTextBoxColumn, Me.CitizenshipDataGridViewTextBoxColumn, Me.HobbiesDataGridViewTextBoxColumn, Me.FinancialDataGridViewTextBoxColumn, Me.FamilyDataGridViewTextBoxColumn, Me.LikeIdDataGridViewTextBoxColumn})
@@ -160,6 +162,27 @@ Partial Class Form1
         Me.DGV.Name = "DGV"
         Me.DGV.Size = New System.Drawing.Size(1106, 315)
         Me.DGV.TabIndex = 22
+        '
+        'IdDataGridViewTextBoxColumn
+        '
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
+        Me.IdDataGridViewTextBoxColumn.FillWeight = 50.0!
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdDataGridViewTextBoxColumn.Width = 50
+        '
+        'SexDataGridViewTextBoxColumn
+        '
+        Me.SexDataGridViewTextBoxColumn.DataPropertyName = "Sex"
+        Me.SexDataGridViewTextBoxColumn.DataSource = Me.TSexBindingSource
+        Me.SexDataGridViewTextBoxColumn.DisplayMember = "Sex"
+        Me.SexDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.SexDataGridViewTextBoxColumn.HeaderText = "Sex"
+        Me.SexDataGridViewTextBoxColumn.Name = "SexDataGridViewTextBoxColumn"
+        Me.SexDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SexDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.SexDataGridViewTextBoxColumn.ValueMember = "Sex"
         '
         'TSexBindingSource
         '
@@ -176,45 +199,151 @@ Partial Class Form1
         Me.DataSet1.DataSetName = "DataSet1"
         Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'AgeDataGridViewTextBoxColumn
+        '
+        Me.AgeDataGridViewTextBoxColumn.DataPropertyName = "Age"
+        Me.AgeDataGridViewTextBoxColumn.DataSource = Me.TAgeBindingSource
+        Me.AgeDataGridViewTextBoxColumn.DisplayMember = "Age"
+        Me.AgeDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.AgeDataGridViewTextBoxColumn.HeaderText = "Age"
+        Me.AgeDataGridViewTextBoxColumn.Name = "AgeDataGridViewTextBoxColumn"
+        Me.AgeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AgeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.AgeDataGridViewTextBoxColumn.ValueMember = "Age"
+        '
         'TAgeBindingSource
         '
         Me.TAgeBindingSource.DataMember = "TAge"
         Me.TAgeBindingSource.DataSource = Me.DataSetBindingSource
+        '
+        'EthnicityDataGridViewTextBoxColumn
+        '
+        Me.EthnicityDataGridViewTextBoxColumn.DataPropertyName = "Ethnicity"
+        Me.EthnicityDataGridViewTextBoxColumn.DataSource = Me.TEthnicityBindingSource
+        Me.EthnicityDataGridViewTextBoxColumn.DisplayMember = "Ethnicity"
+        Me.EthnicityDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.EthnicityDataGridViewTextBoxColumn.HeaderText = "Ethnicity"
+        Me.EthnicityDataGridViewTextBoxColumn.Name = "EthnicityDataGridViewTextBoxColumn"
+        Me.EthnicityDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.EthnicityDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.EthnicityDataGridViewTextBoxColumn.ValueMember = "Ethnicity"
         '
         'TEthnicityBindingSource
         '
         Me.TEthnicityBindingSource.DataMember = "TEthnicity"
         Me.TEthnicityBindingSource.DataSource = Me.DataSetBindingSource
         '
+        'BuildDataGridViewTextBoxColumn
+        '
+        Me.BuildDataGridViewTextBoxColumn.DataPropertyName = "Build"
+        Me.BuildDataGridViewTextBoxColumn.DataSource = Me.TBuildBindingSource
+        Me.BuildDataGridViewTextBoxColumn.DisplayMember = "Build"
+        Me.BuildDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.BuildDataGridViewTextBoxColumn.HeaderText = "Build"
+        Me.BuildDataGridViewTextBoxColumn.Name = "BuildDataGridViewTextBoxColumn"
+        Me.BuildDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BuildDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.BuildDataGridViewTextBoxColumn.ValueMember = "Build"
+        '
         'TBuildBindingSource
         '
         Me.TBuildBindingSource.DataMember = "TBuild"
         Me.TBuildBindingSource.DataSource = Me.DataSetBindingSource
+        '
+        'EducationDataGridViewTextBoxColumn
+        '
+        Me.EducationDataGridViewTextBoxColumn.DataPropertyName = "Education"
+        Me.EducationDataGridViewTextBoxColumn.DataSource = Me.TEducationBindingSource
+        Me.EducationDataGridViewTextBoxColumn.DisplayMember = "Education"
+        Me.EducationDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.EducationDataGridViewTextBoxColumn.HeaderText = "Education"
+        Me.EducationDataGridViewTextBoxColumn.Name = "EducationDataGridViewTextBoxColumn"
+        Me.EducationDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.EducationDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.EducationDataGridViewTextBoxColumn.ValueMember = "Education"
         '
         'TEducationBindingSource
         '
         Me.TEducationBindingSource.DataMember = "TEducation"
         Me.TEducationBindingSource.DataSource = Me.DataSetBindingSource
         '
+        'CitizenshipDataGridViewTextBoxColumn
+        '
+        Me.CitizenshipDataGridViewTextBoxColumn.DataPropertyName = "Citizenship"
+        Me.CitizenshipDataGridViewTextBoxColumn.DataSource = Me.TCitizenshipBindingSource
+        Me.CitizenshipDataGridViewTextBoxColumn.DisplayMember = "Citizenship"
+        Me.CitizenshipDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.CitizenshipDataGridViewTextBoxColumn.HeaderText = "Citizenship"
+        Me.CitizenshipDataGridViewTextBoxColumn.Name = "CitizenshipDataGridViewTextBoxColumn"
+        Me.CitizenshipDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CitizenshipDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.CitizenshipDataGridViewTextBoxColumn.ValueMember = "Citizenship"
+        '
         'TCitizenshipBindingSource
         '
         Me.TCitizenshipBindingSource.DataMember = "TCitizenship"
         Me.TCitizenshipBindingSource.DataSource = Me.DataSetBindingSource
+        '
+        'HobbiesDataGridViewTextBoxColumn
+        '
+        Me.HobbiesDataGridViewTextBoxColumn.DataPropertyName = "Hobbies"
+        Me.HobbiesDataGridViewTextBoxColumn.DataSource = Me.THobbiesBindingSource
+        Me.HobbiesDataGridViewTextBoxColumn.DisplayMember = "Hobbies"
+        Me.HobbiesDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.HobbiesDataGridViewTextBoxColumn.FillWeight = 140.0!
+        Me.HobbiesDataGridViewTextBoxColumn.HeaderText = "Hobbies"
+        Me.HobbiesDataGridViewTextBoxColumn.Name = "HobbiesDataGridViewTextBoxColumn"
+        Me.HobbiesDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.HobbiesDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.HobbiesDataGridViewTextBoxColumn.ValueMember = "Hobbies"
+        Me.HobbiesDataGridViewTextBoxColumn.Width = 140
         '
         'THobbiesBindingSource
         '
         Me.THobbiesBindingSource.DataMember = "THobbies"
         Me.THobbiesBindingSource.DataSource = Me.DataSetBindingSource
         '
+        'FinancialDataGridViewTextBoxColumn
+        '
+        Me.FinancialDataGridViewTextBoxColumn.DataPropertyName = "Financial"
+        Me.FinancialDataGridViewTextBoxColumn.DataSource = Me.TFinancialBindingSource
+        Me.FinancialDataGridViewTextBoxColumn.DisplayMember = "Financial"
+        Me.FinancialDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.FinancialDataGridViewTextBoxColumn.HeaderText = "Financial"
+        Me.FinancialDataGridViewTextBoxColumn.Name = "FinancialDataGridViewTextBoxColumn"
+        Me.FinancialDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.FinancialDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.FinancialDataGridViewTextBoxColumn.ValueMember = "Financial"
+        '
         'TFinancialBindingSource
         '
         Me.TFinancialBindingSource.DataMember = "TFinancial"
         Me.TFinancialBindingSource.DataSource = Me.DataSetBindingSource
         '
+        'FamilyDataGridViewTextBoxColumn
+        '
+        Me.FamilyDataGridViewTextBoxColumn.DataPropertyName = "Family"
+        Me.FamilyDataGridViewTextBoxColumn.DataSource = Me.TFamilyBindingSource
+        Me.FamilyDataGridViewTextBoxColumn.DisplayMember = "Family"
+        Me.FamilyDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
+        Me.FamilyDataGridViewTextBoxColumn.HeaderText = "Family"
+        Me.FamilyDataGridViewTextBoxColumn.Name = "FamilyDataGridViewTextBoxColumn"
+        Me.FamilyDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.FamilyDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.FamilyDataGridViewTextBoxColumn.ValueMember = "Family"
+        '
         'TFamilyBindingSource
         '
         Me.TFamilyBindingSource.DataMember = "TFamily"
         Me.TFamilyBindingSource.DataSource = Me.DataSetBindingSource
+        '
+        'LikeIdDataGridViewTextBoxColumn
+        '
+        Me.LikeIdDataGridViewTextBoxColumn.DataPropertyName = "LikeId"
+        Me.LikeIdDataGridViewTextBoxColumn.FillWeight = 50.0!
+        Me.LikeIdDataGridViewTextBoxColumn.HeaderText = "Likes"
+        Me.LikeIdDataGridViewTextBoxColumn.Name = "LikeIdDataGridViewTextBoxColumn"
+        Me.LikeIdDataGridViewTextBoxColumn.Width = 50
         '
         'ProfileBindingSource
         '
@@ -657,133 +786,6 @@ Partial Class Form1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(0, 17)
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.FillWeight = 50.0!
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdDataGridViewTextBoxColumn.Width = 50
-        '
-        'SexDataGridViewTextBoxColumn
-        '
-        Me.SexDataGridViewTextBoxColumn.DataPropertyName = "Sex"
-        Me.SexDataGridViewTextBoxColumn.DataSource = Me.TSexBindingSource
-        Me.SexDataGridViewTextBoxColumn.DisplayMember = "Sex"
-        Me.SexDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.SexDataGridViewTextBoxColumn.HeaderText = "Sex"
-        Me.SexDataGridViewTextBoxColumn.Name = "SexDataGridViewTextBoxColumn"
-        Me.SexDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.SexDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.SexDataGridViewTextBoxColumn.ValueMember = "Sex"
-        '
-        'AgeDataGridViewTextBoxColumn
-        '
-        Me.AgeDataGridViewTextBoxColumn.DataPropertyName = "Age"
-        Me.AgeDataGridViewTextBoxColumn.DataSource = Me.TAgeBindingSource
-        Me.AgeDataGridViewTextBoxColumn.DisplayMember = "Age"
-        Me.AgeDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.AgeDataGridViewTextBoxColumn.HeaderText = "Age"
-        Me.AgeDataGridViewTextBoxColumn.Name = "AgeDataGridViewTextBoxColumn"
-        Me.AgeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AgeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.AgeDataGridViewTextBoxColumn.ValueMember = "Age"
-        '
-        'EthnicityDataGridViewTextBoxColumn
-        '
-        Me.EthnicityDataGridViewTextBoxColumn.DataPropertyName = "Ethnicity"
-        Me.EthnicityDataGridViewTextBoxColumn.DataSource = Me.TEthnicityBindingSource
-        Me.EthnicityDataGridViewTextBoxColumn.DisplayMember = "Ethnicity"
-        Me.EthnicityDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.EthnicityDataGridViewTextBoxColumn.HeaderText = "Ethnicity"
-        Me.EthnicityDataGridViewTextBoxColumn.Name = "EthnicityDataGridViewTextBoxColumn"
-        Me.EthnicityDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.EthnicityDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.EthnicityDataGridViewTextBoxColumn.ValueMember = "Ethnicity"
-        '
-        'BuildDataGridViewTextBoxColumn
-        '
-        Me.BuildDataGridViewTextBoxColumn.DataPropertyName = "Build"
-        Me.BuildDataGridViewTextBoxColumn.DataSource = Me.TBuildBindingSource
-        Me.BuildDataGridViewTextBoxColumn.DisplayMember = "Build"
-        Me.BuildDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.BuildDataGridViewTextBoxColumn.HeaderText = "Build"
-        Me.BuildDataGridViewTextBoxColumn.Name = "BuildDataGridViewTextBoxColumn"
-        Me.BuildDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BuildDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.BuildDataGridViewTextBoxColumn.ValueMember = "Build"
-        '
-        'EducationDataGridViewTextBoxColumn
-        '
-        Me.EducationDataGridViewTextBoxColumn.DataPropertyName = "Education"
-        Me.EducationDataGridViewTextBoxColumn.DataSource = Me.TEducationBindingSource
-        Me.EducationDataGridViewTextBoxColumn.DisplayMember = "Education"
-        Me.EducationDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.EducationDataGridViewTextBoxColumn.HeaderText = "Education"
-        Me.EducationDataGridViewTextBoxColumn.Name = "EducationDataGridViewTextBoxColumn"
-        Me.EducationDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.EducationDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.EducationDataGridViewTextBoxColumn.ValueMember = "Education"
-        '
-        'CitizenshipDataGridViewTextBoxColumn
-        '
-        Me.CitizenshipDataGridViewTextBoxColumn.DataPropertyName = "Citizenship"
-        Me.CitizenshipDataGridViewTextBoxColumn.DataSource = Me.TCitizenshipBindingSource
-        Me.CitizenshipDataGridViewTextBoxColumn.DisplayMember = "Citizenship"
-        Me.CitizenshipDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.CitizenshipDataGridViewTextBoxColumn.HeaderText = "Citizenship"
-        Me.CitizenshipDataGridViewTextBoxColumn.Name = "CitizenshipDataGridViewTextBoxColumn"
-        Me.CitizenshipDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.CitizenshipDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.CitizenshipDataGridViewTextBoxColumn.ValueMember = "Citizenship"
-        '
-        'HobbiesDataGridViewTextBoxColumn
-        '
-        Me.HobbiesDataGridViewTextBoxColumn.DataPropertyName = "Hobbies"
-        Me.HobbiesDataGridViewTextBoxColumn.DataSource = Me.THobbiesBindingSource
-        Me.HobbiesDataGridViewTextBoxColumn.DisplayMember = "Hobbies"
-        Me.HobbiesDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.HobbiesDataGridViewTextBoxColumn.FillWeight = 140.0!
-        Me.HobbiesDataGridViewTextBoxColumn.HeaderText = "Hobbies"
-        Me.HobbiesDataGridViewTextBoxColumn.Name = "HobbiesDataGridViewTextBoxColumn"
-        Me.HobbiesDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.HobbiesDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.HobbiesDataGridViewTextBoxColumn.ValueMember = "Hobbies"
-        Me.HobbiesDataGridViewTextBoxColumn.Width = 140
-        '
-        'FinancialDataGridViewTextBoxColumn
-        '
-        Me.FinancialDataGridViewTextBoxColumn.DataPropertyName = "Financial"
-        Me.FinancialDataGridViewTextBoxColumn.DataSource = Me.TFinancialBindingSource
-        Me.FinancialDataGridViewTextBoxColumn.DisplayMember = "Financial"
-        Me.FinancialDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.FinancialDataGridViewTextBoxColumn.HeaderText = "Financial"
-        Me.FinancialDataGridViewTextBoxColumn.Name = "FinancialDataGridViewTextBoxColumn"
-        Me.FinancialDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.FinancialDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.FinancialDataGridViewTextBoxColumn.ValueMember = "Financial"
-        '
-        'FamilyDataGridViewTextBoxColumn
-        '
-        Me.FamilyDataGridViewTextBoxColumn.DataPropertyName = "Family"
-        Me.FamilyDataGridViewTextBoxColumn.DataSource = Me.TFamilyBindingSource
-        Me.FamilyDataGridViewTextBoxColumn.DisplayMember = "Family"
-        Me.FamilyDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox
-        Me.FamilyDataGridViewTextBoxColumn.HeaderText = "Family"
-        Me.FamilyDataGridViewTextBoxColumn.Name = "FamilyDataGridViewTextBoxColumn"
-        Me.FamilyDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.FamilyDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.FamilyDataGridViewTextBoxColumn.ValueMember = "Family"
-        '
-        'LikeIdDataGridViewTextBoxColumn
-        '
-        Me.LikeIdDataGridViewTextBoxColumn.DataPropertyName = "LikeId"
-        Me.LikeIdDataGridViewTextBoxColumn.FillWeight = 50.0!
-        Me.LikeIdDataGridViewTextBoxColumn.HeaderText = "Likes"
-        Me.LikeIdDataGridViewTextBoxColumn.Name = "LikeIdDataGridViewTextBoxColumn"
-        Me.LikeIdDataGridViewTextBoxColumn.Width = 50
         '
         'Form1
         '
