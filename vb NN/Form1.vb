@@ -149,7 +149,7 @@
         Dim mres = oneway.match(you)
         'TODO: color green
 
-        ToolStripStatusLabel1.Text = String.Join(" ", mres.att)
+        MsgBox(String.Join(" ", mres.att))
 
         'ComboBoxMSex.SelectedIndex = mres.att(0)
         'ComboBoxMAge.SelectedIndex = mres.att(1)

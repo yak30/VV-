@@ -1,4 +1,8 @@
-﻿Public Class NN
+﻿Imports Accord.Math
+Imports Accord.Math.Decompositions
+
+
+Public Class NN
     Implements INN
 
     Private neurons As New List(Of Neuron)
@@ -56,7 +60,12 @@
 
         'm>n?
         Dim svd = New Accord.Math.Decompositions.SingularValueDecomposition(A, True, True, True)
-        Dim X(,) = svd.Solve(B)
+        Dim U = svd.LeftSingularVectors
+        Dim S = svd.DiagonalMatrix
+        Dim V = svd.RightSingularVectors
+        Dim pseudoinverseA = V.Multiply(S.Inverse()).MultiplyByTranspose(U)
+        Dim X = pseudoinverseA.Multiply(B)
+        'Dim X(,) = svd.Solve(B)
 
         'update weights
         i = 0 'neuron
