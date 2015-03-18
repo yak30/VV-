@@ -63,10 +63,10 @@ Partial Class Form1
         Me.TFamilyBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ComboBoxMFinancial = New System.Windows.Forms.ComboBox()
         Me.TFinancialBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.LabelYou = New System.Windows.Forms.Label()
         Me.ComboBoxMHobbies = New System.Windows.Forms.ComboBox()
         Me.THobbiesBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LabelMatch = New System.Windows.Forms.Label()
         Me.ComboBoxMCitizen = New System.Windows.Forms.ComboBox()
         Me.TCitizenshipBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ComboBoxYAge = New System.Windows.Forms.ComboBox()
@@ -100,6 +100,9 @@ Partial Class Form1
         Me.TBuildTableAdapter = New vb_NN.DataSet1TableAdapters.TBuildTableAdapter()
         Me.ProfileTableAdapter = New vb_NN.DataSet1TableAdapters.ProfileTableAdapter()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.ReloadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Panel1.SuspendLayout()
         CType(Me.DGV, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -362,9 +365,9 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.ComboBoxMEthnic)
         Me.Panel2.Controls.Add(Me.ComboBoxMFamily)
         Me.Panel2.Controls.Add(Me.ComboBoxMFinancial)
-        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.LabelYou)
         Me.Panel2.Controls.Add(Me.ComboBoxMHobbies)
-        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.LabelMatch)
         Me.Panel2.Controls.Add(Me.ComboBoxMCitizen)
         Me.Panel2.Controls.Add(Me.ComboBoxYAge)
         Me.Panel2.Controls.Add(Me.ComboBoxMEdu)
@@ -506,14 +509,14 @@ Partial Class Form1
         Me.TFinancialBindingSource2.DataMember = "TFinancial"
         Me.TFinancialBindingSource2.DataSource = Me.DataSet1
         '
-        'Label4
+        'LabelYou
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 5)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(26, 13)
-        Me.Label4.TabIndex = 25
-        Me.Label4.Text = "You"
+        Me.LabelYou.AutoSize = True
+        Me.LabelYou.Location = New System.Drawing.Point(3, 5)
+        Me.LabelYou.Name = "LabelYou"
+        Me.LabelYou.Size = New System.Drawing.Size(26, 13)
+        Me.LabelYou.TabIndex = 25
+        Me.LabelYou.Text = "You"
         '
         'ComboBoxMHobbies
         '
@@ -533,14 +536,14 @@ Partial Class Form1
         Me.THobbiesBindingSource2.DataMember = "THobbies"
         Me.THobbiesBindingSource2.DataSource = Me.DataSet1
         '
-        'Label3
+        'LabelMatch
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 30)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 13)
-        Me.Label3.TabIndex = 26
-        Me.Label3.Text = "Match"
+        Me.LabelMatch.AutoSize = True
+        Me.LabelMatch.Location = New System.Drawing.Point(3, 30)
+        Me.LabelMatch.Name = "LabelMatch"
+        Me.LabelMatch.Size = New System.Drawing.Size(37, 13)
+        Me.LabelMatch.TabIndex = 26
+        Me.LabelMatch.Text = "Match"
         '
         'ComboBoxMCitizen
         '
@@ -775,17 +778,41 @@ Partial Class Form1
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1, Me.ToolStripStatusLabel1})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 393)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(1124, 22)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
         '
+        'ToolStripDropDownButton1
+        '
+        Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReloadToolStripMenuItem, Me.SaveToolStripMenuItem})
+        Me.ToolStripDropDownButton1.Image = Global.vb_NN.My.Resources.Resources.database
+        Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(29, 20)
+        Me.ToolStripDropDownButton1.Text = "ToolStripDropDownButton1"
+        '
+        'ReloadToolStripMenuItem
+        '
+        Me.ReloadToolStripMenuItem.Name = "ReloadToolStripMenuItem"
+        Me.ReloadToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
+        Me.ReloadToolStripMenuItem.Text = "Reload"
+        '
+        'SaveToolStripMenuItem
+        '
+        Me.SaveToolStripMenuItem.Image = Global.vb_NN.My.Resources.Resources.save
+        Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
+        Me.SaveToolStripMenuItem.Text = "Save"
+        '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(0, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(97, 17)
+        Me.ToolStripStatusLabel1.Text = "Database loaded."
         '
         'Form1
         '
@@ -841,8 +868,8 @@ Partial Class Form1
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents ButtonTwoWay As System.Windows.Forms.Button
     Friend WithEvents ButtonOneWay As System.Windows.Forms.Button
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents LabelYou As System.Windows.Forms.Label
+    Friend WithEvents LabelMatch As System.Windows.Forms.Label
     Friend WithEvents ComboBoxYAge As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBoxYEthnic As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBoxYBuild As System.Windows.Forms.ComboBox
@@ -915,5 +942,8 @@ Partial Class Form1
     Friend WithEvents FinancialDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents FamilyDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewComboBoxColumn
     Friend WithEvents LikeIdDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ToolStripDropDownButton1 As System.Windows.Forms.ToolStripDropDownButton
+    Friend WithEvents ReloadToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SaveToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

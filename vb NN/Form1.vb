@@ -77,23 +77,23 @@
 
         Dim exp1 = New Example
         exp1.from = p1
-        exp1.match_to = p2
+        exp1.match = p2
 
         Dim exp2 = New Example
         exp2.from = p2
-        exp2.match_to = p1
+        exp2.match = p1
 
         Dim exp3 = New Example
         exp3.from = p3
-        exp3.match_to = p2
+        exp3.match = p2
 
         Dim exp4 = New Example
         exp4.from = p4
-        exp4.match_to = p5
+        exp4.match = p5
 
         Dim exp5 = New Example
         exp5.from = p5
-        exp5.match_to = p4
+        exp5.match = p4
 
         ExList.Add(exp1)
         ExList.Add(exp2)
@@ -143,23 +143,7 @@
             End With
         Next
     End Sub
-    Private Sub ButtonOneWay_Click(sender As Object, e As EventArgs) Handles ButtonOneWay.Click
-        If oneway_learned = False Then
-            populate()
-
-            For Each row As DataGridViewRow In DGV.Rows
-                If row.IsNewRow Then Exit For
-                Dim ex As New Example
-                ex.match_to = Plist(row.Cells("IdDataGridViewTextBoxColumn").Value - 1)
-                ex.from = Plist(row.Cells("LikeIdDataGridViewTextBoxColumn").Value - 1)
-                ExList.Add(ex)
-            Next
-
-            oneway = New NN(9)
-            oneway.learn(ExList)
-            oneway_learned = True
-        End If
-
+    Private Function your_profile() As Profile
         Dim you = New Profile
         With you
             .att(0) = ComboBoxYSex.SelectedValue
@@ -172,35 +156,83 @@
             .att(7) = ComboBoxYFinancial.SelectedValue
             .att(8) = ComboBoxYFamily.SelectedValue
         End With
+        Return you
+    End Function
+    Private Sub output_match(mres As Profile)
+        ComboBoxMSex.SelectedIndex = mres.att(0)
+        ComboBoxMAge.SelectedIndex = mres.att(1)
+        ComboBoxMEthnic.SelectedIndex = mres.att(2)
+        ComboBoxMBuild.SelectedIndex = mres.att(3)
+        ComboBoxMEdu.SelectedIndex = mres.att(4)
+        ComboBoxMCitizen.SelectedIndex = mres.att(5)
+        ComboBoxMHobbies.SelectedIndex = mres.att(6)
+        ComboBoxMFinancial.SelectedIndex = mres.att(7)
+        ComboBoxMFamily.SelectedIndex = mres.att(8)
+    End Sub
 
-        Dim mres = oneway.match(you)
+    Private Sub ButtonOneWay_Click(sender As Object, e As EventArgs) Handles ButtonOneWay.Click
+        If DataSet1.HasChanges() Then oneway_learned = False
+        If oneway_learned = False Then
+            populate()
+
+            For Each row As DataGridViewRow In DGV.Rows
+                If row.IsNewRow Then Exit For
+                If IsDBNull(row.Cells("LikeIdDataGridViewTextBoxColumn").Value) Then Continue For
+                Dim ex As New Example
+                ex.match = Plist(row.Cells("IdDataGridViewTextBoxColumn").Value - 1)
+                ex.from = Plist(row.Cells("LikeIdDataGridViewTextBoxColumn").Value - 1)
+                ExList.Add(ex)
+            Next
+
+            oneway = New NN(9)
+            oneway.learn(ExList)
+            oneway_learned = True
+        End If
+
+        Dim mres = oneway.match(your_profile)
         highlight_matches(mres)
-        MsgBox(String.Join(" ", mres.att))
+        ToolStripStatusLabel1.Text = "Raw results: " + String.Join(" ", mres.att)
 
-        'ComboBoxMSex.SelectedIndex = mres.att(0)
-        'ComboBoxMAge.SelectedIndex = mres.att(1)
-        'ComboBoxMEthnic.SelectedIndex = mres.att(2)
-        'ComboBoxMBuild.SelectedIndex = mres.att(3)
-        'ComboBoxMEdu.SelectedIndex = mres.att(4)
-        'ComboBoxMCitizen.SelectedIndex = mres.att(5)
-        'ComboBoxMHobbies.SelectedIndex = mres.att(6)
-        'ComboBoxMFinancial.SelectedIndex = mres.att(7)
-        'ComboBoxMFamily.SelectedIndex = mres.att(8)
-
+        'output_match(mres)
     End Sub
 
     Private Sub ButtonTwoWay_Click(sender As Object, e As EventArgs) Handles ButtonTwoWay.Click
+        If DataSet1.HasChanges() Then twoway_learned = False
+        If twoway_learned = False Then
+            populate()
 
+            For Each row As DataGridViewRow In DGV.Rows
+                If row.IsNewRow Then Exit For
+                If IsDBNull(row.Cells("LikeIdDataGridViewTextBoxColumn").Value) Then Continue For
+                Dim ex As New Example 'who likes you?
+                ex.match = Plist(row.Cells("IdDataGridViewTextBoxColumn").Value - 1)
+                ex.from = Plist(row.Cells("LikeIdDataGridViewTextBoxColumn").Value - 1)
+                ExList.Add(ex)
+                Dim ex2 As New Example 'whom do you like?
+                ex2.match = Plist(row.Cells("LikeIdDataGridViewTextBoxColumn").Value - 1)
+                ex2.from = Plist(row.Cells("IdDataGridViewTextBoxColumn").Value - 1)
+                ExList.Add(ex2)
+            Next
+
+            twoway = New NN(9)
+            twoway.learn(ExList)
+            twoway_learned = True
+        End If
+
+        Dim mres = twoway.match(your_profile)
+        highlight_matches(mres)
+        ToolStripStatusLabel1.Text = "Raw results: " + String.Join(" ", mres.att)
+
+        'output_match(mres)
     End Sub
 
-    Private Sub ButtonOneWay_MouseMove(sender As Object, e As MouseEventArgs) Handles ButtonOneWay.MouseMove
+    Private Sub ButtonOneWay_MouseEnter(sender As Object, e As EventArgs) Handles ButtonOneWay.MouseEnter
         ToolStripStatusLabel1.Text = "This button will match members who are interested in your profile to you."
     End Sub
 
-    Private Sub ButtonTwoWay_MouseMove(sender As Object, e As MouseEventArgs) Handles ButtonTwoWay.MouseMove
-        ToolStripStatusLabel1.Text = "This button will match you with members who are interesting to you and who are interested in your profile."
+    Private Sub ButtonTwoWay_MouseEnter(sender As Object, e As EventArgs) Handles ButtonTwoWay.MouseEnter
+        ToolStripStatusLabel1.Text = "This button will match you with members interested in your profile which are also interesting to people like you."
     End Sub
-
 
     Private Sub DGV_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV.CellMouseDoubleClick
         Dim s As DataGridView = sender
@@ -221,15 +253,40 @@
 
     Private Sub DGV_CellMouseMove(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV.CellMouseMove
         ToolStripStatusLabel1.Text = "Double click on the Id column to use a saved profile for matching." +
-            " Matched Ids will be colored dark green to light green for best to worst, respectively."
+            " Matched Ids (if any) will be colored dark green to light green for excellent to passable matches, respectively."
 
     End Sub
+
+    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+        If DataSet1.HasChanges() Then
+            oneway_learned = False
+            twoway_learned = False
+            With DataSet1.Profile
+                Try
+                    ProfileTableAdapter.Update(.GetChanges())
+                    .AcceptChanges()
+                    ToolStripStatusLabel1.Text = "Changes saved."
+                Catch ex As System.Data.SqlClient.SqlException
+                    ToolStripStatusLabel1.Text = "Data error. Changes aborted. (Is there an invalid LikeId?)"
+                    .RejectChanges()
+                End Try
+            End With
+        End If
+    End Sub
+
+    Private Sub ReloadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReloadToolStripMenuItem.Click
+        Me.ProfileTableAdapter.Fill(Me.DataSet1.Profile)
+        ToolStripStatusLabel1.Text = "Database loaded."
+        oneway_learned = False
+        twoway_learned = False
+    End Sub
+
 End Class
 Public Class Profile
     Public att(8) As Double
 End Class
 Public Class Example
-    Public from, match_to As Profile
+    Public from, match As Profile
 
 End Class
 Public Interface INN

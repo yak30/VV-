@@ -45,7 +45,7 @@ Partial Public Class DataSet1
     
     Private tableTSex As TSexDataTable
     
-    Private relationFK__Profile__LikeId__14270015 As Global.System.Data.DataRelation
+    Private relationFK__Profile__LikeId__31B762FC As Global.System.Data.DataRelation
     
     Private relationFK_Profile_TAge As Global.System.Data.DataRelation
     
@@ -430,7 +430,7 @@ Partial Public Class DataSet1
                 Me.tableTSex.InitVars
             End If
         End If
-        Me.relationFK__Profile__LikeId__14270015 = Me.Relations("FK__Profile__LikeId__14270015")
+        Me.relationFK__Profile__LikeId__31B762FC = Me.Relations("FK__Profile__LikeId__31B762FC")
         Me.relationFK_Profile_TAge = Me.Relations("FK_Profile_TAge")
         Me.relationFK_Profile_TBuild = Me.Relations("FK_Profile_TBuild")
         Me.relationFK_Profile_TCitizenship = Me.Relations("FK_Profile_TCitizenship")
@@ -470,8 +470,8 @@ Partial Public Class DataSet1
         MyBase.Tables.Add(Me.tableTHobbies)
         Me.tableTSex = New TSexDataTable()
         MyBase.Tables.Add(Me.tableTSex)
-        Me.relationFK__Profile__LikeId__14270015 = New Global.System.Data.DataRelation("FK__Profile__LikeId__14270015", New Global.System.Data.DataColumn() {Me.tableProfile.IdColumn}, New Global.System.Data.DataColumn() {Me.tableProfile.LikeIdColumn}, false)
-        Me.Relations.Add(Me.relationFK__Profile__LikeId__14270015)
+        Me.relationFK__Profile__LikeId__31B762FC = New Global.System.Data.DataRelation("FK__Profile__LikeId__31B762FC", New Global.System.Data.DataColumn() {Me.tableProfile.IdColumn}, New Global.System.Data.DataColumn() {Me.tableProfile.LikeIdColumn}, false)
+        Me.Relations.Add(Me.relationFK__Profile__LikeId__31B762FC)
         Me.relationFK_Profile_TAge = New Global.System.Data.DataRelation("FK_Profile_TAge", New Global.System.Data.DataColumn() {Me.tableTAge.AgeColumn}, New Global.System.Data.DataColumn() {Me.tableProfile.AgeColumn}, false)
         Me.Relations.Add(Me.relationFK_Profile_TAge)
         Me.relationFK_Profile_TBuild = New Global.System.Data.DataRelation("FK_Profile_TBuild", New Global.System.Data.DataColumn() {Me.tableTBuild.BuildColumn}, New Global.System.Data.DataColumn() {Me.tableProfile.BuildColumn}, false)
@@ -828,10 +828,10 @@ Partial Public Class DataSet1
             Me.Rows.Add(row)
         End Sub
         
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddProfileRow(ByVal parentTSexRowByFK_Profile_TSex As TSexRow, ByVal parentTAgeRowByFK_Profile_TAge As TAgeRow, ByVal parentTEthnicityRowByFK_Profile_TEthnicity As TEthnicityRow, ByVal parentTBuildRowByFK_Profile_TBuild As TBuildRow, ByVal parentTEducationRowByFK_Profile_TEducation As TEducationRow, ByVal parentTCitizenshipRowByFK_Profile_TCitizenship As TCitizenshipRow, ByVal parentTHobbiesRowByFK_Profile_THobbies As THobbiesRow, ByVal parentTFinancialRowByFK_Profile_TFinancial As TFinancialRow, ByVal parentTFamilyRowByFK_Profile_TFamily As TFamilyRow, ByVal parentProfileRowByFK__Profile__LikeId__14270015 As ProfileRow) As ProfileRow
-            Dim rowProfileRow As ProfileRow = CType(Me.NewRow,ProfileRow)
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
+        Public Overloads Function AddProfileRow(ByVal parentTSexRowByFK_Profile_TSex As TSexRow, ByVal parentTAgeRowByFK_Profile_TAge As TAgeRow, ByVal parentTEthnicityRowByFK_Profile_TEthnicity As TEthnicityRow, ByVal parentTBuildRowByFK_Profile_TBuild As TBuildRow, ByVal parentTEducationRowByFK_Profile_TEducation As TEducationRow, ByVal parentTCitizenshipRowByFK_Profile_TCitizenship As TCitizenshipRow, ByVal parentTHobbiesRowByFK_Profile_THobbies As THobbiesRow, ByVal parentTFinancialRowByFK_Profile_TFinancial As TFinancialRow, ByVal parentTFamilyRowByFK_Profile_TFamily As TFamilyRow, ByVal parentProfileRowByFK__Profile__LikeId__31B762FC As ProfileRow) As ProfileRow
+            Dim rowProfileRow As ProfileRow = CType(Me.NewRow, ProfileRow)
             Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing, Nothing}
             If (Not (parentTSexRowByFK_Profile_TSex) Is Nothing) Then
                 columnValuesArray(1) = parentTSexRowByFK_Profile_TSex(0)
@@ -860,36 +860,36 @@ Partial Public Class DataSet1
             If (Not (parentTFamilyRowByFK_Profile_TFamily) Is Nothing) Then
                 columnValuesArray(9) = parentTFamilyRowByFK_Profile_TFamily(0)
             End If
-            If (Not (parentProfileRowByFK__Profile__LikeId__14270015) Is Nothing) Then
-                columnValuesArray(10) = parentProfileRowByFK__Profile__LikeId__14270015(0)
+            If (Not (parentProfileRowByFK__Profile__LikeId__31B762FC) Is Nothing) Then
+                columnValuesArray(10) = parentProfileRowByFK__Profile__LikeId__31B762FC(0)
             End If
             rowProfileRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowProfileRow)
             Return rowProfileRow
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Public Function FindById(ByVal Id As Integer) As ProfileRow
-            Return CType(Me.Rows.Find(New Object() {Id}),ProfileRow)
+            Return CType(Me.Rows.Find(New Object() {Id}), ProfileRow)
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As ProfileDataTable = CType(MyBase.Clone,ProfileDataTable)
-            cln.InitVars
+            Dim cln As ProfileDataTable = CType(MyBase.Clone, ProfileDataTable)
+            cln.InitVars()
             Return cln
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
             Return New ProfileDataTable()
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Friend Sub InitVars()
             Me.columnId = MyBase.Columns("Id")
             Me.columnSex = MyBase.Columns("Sex")
@@ -903,9 +903,9 @@ Partial Public Class DataSet1
             Me.columnFamily = MyBase.Columns("Family")
             Me.columnLikeId = MyBase.Columns("LikeId")
         End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Private Sub InitClass()
             Me.columnId = New Global.System.Data.DataColumn("Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnId)
@@ -929,20 +929,28 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnFamily)
             Me.columnLikeId = New Global.System.Data.DataColumn("LikeId", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnLikeId)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId}, true))
-            Me.columnId.AutoIncrement = true
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId}, True))
+            Me.columnId.AutoIncrement = True
             Me.columnId.AutoIncrementSeed = 1
-            Me.columnId.AllowDBNull = false
-            Me.columnId.ReadOnly = true
-            Me.columnId.Unique = true
+            Me.columnId.AllowDBNull = False
+            Me.columnId.Unique = True
+            Me.columnSex.AllowDBNull = False
             Me.columnSex.MaxLength = 50
+            Me.columnAge.AllowDBNull = False
             Me.columnAge.MaxLength = 50
+            Me.columnEthnicity.AllowDBNull = False
             Me.columnEthnicity.MaxLength = 50
+            Me.columnBuild.AllowDBNull = False
             Me.columnBuild.MaxLength = 50
+            Me.columnEducation.AllowDBNull = False
             Me.columnEducation.MaxLength = 50
+            Me.columnCitizenship.AllowDBNull = False
             Me.columnCitizenship.MaxLength = 50
+            Me.columnHobbies.AllowDBNull = False
             Me.columnHobbies.MaxLength = 50
+            Me.columnFinancial.AllowDBNull = False
             Me.columnFinancial.MaxLength = 50
+            Me.columnFamily.AllowDBNull = False
             Me.columnFamily.MaxLength = 50
         End Sub
         
@@ -3623,11 +3631,7 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Sex() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableProfile.SexColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Sex' in table 'Profile' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableProfile.SexColumn),String)
             End Get
             Set
                 Me(Me.tableProfile.SexColumn) = value
@@ -3638,11 +3642,7 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Age() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableProfile.AgeColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Age' in table 'Profile' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableProfile.AgeColumn),String)
             End Get
             Set
                 Me(Me.tableProfile.AgeColumn) = value
@@ -3653,11 +3653,7 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Ethnicity() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableProfile.EthnicityColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ethnicity' in table 'Profile' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableProfile.EthnicityColumn),String)
             End Get
             Set
                 Me(Me.tableProfile.EthnicityColumn) = value
@@ -3668,11 +3664,7 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Build() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableProfile.BuildColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Build' in table 'Profile' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableProfile.BuildColumn),String)
             End Get
             Set
                 Me(Me.tableProfile.BuildColumn) = value
@@ -3683,11 +3675,7 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Education() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableProfile.EducationColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Education' in table 'Profile' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableProfile.EducationColumn),String)
             End Get
             Set
                 Me(Me.tableProfile.EducationColumn) = value
@@ -3698,11 +3686,7 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Citizenship() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableProfile.CitizenshipColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Citizenship' in table 'Profile' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableProfile.CitizenshipColumn),String)
             End Get
             Set
                 Me(Me.tableProfile.CitizenshipColumn) = value
@@ -3713,11 +3697,7 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Hobbies() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableProfile.HobbiesColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Hobbies' in table 'Profile' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableProfile.HobbiesColumn),String)
             End Get
             Set
                 Me(Me.tableProfile.HobbiesColumn) = value
@@ -3728,11 +3708,7 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Financial() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableProfile.FinancialColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Financial' in table 'Profile' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableProfile.FinancialColumn),String)
             End Get
             Set
                 Me(Me.tableProfile.FinancialColumn) = value
@@ -3743,11 +3719,7 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Family() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableProfile.FamilyColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Family' in table 'Profile' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableProfile.FamilyColumn),String)
             End Get
             Set
                 Me(Me.tableProfile.FamilyColumn) = value
@@ -3773,10 +3745,10 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property ProfileRowParent() As ProfileRow
             Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK__Profile__LikeId__14270015")),ProfileRow)
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK__Profile__LikeId__31B762FC")),ProfileRow)
             End Get
             Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("FK__Profile__LikeId__14270015"))
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK__Profile__LikeId__31B762FC"))
             End Set
         End Property
         
@@ -3881,114 +3853,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsSexNull() As Boolean
-            Return Me.IsNull(Me.tableProfile.SexColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetSexNull()
-            Me(Me.tableProfile.SexColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsAgeNull() As Boolean
-            Return Me.IsNull(Me.tableProfile.AgeColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetAgeNull()
-            Me(Me.tableProfile.AgeColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsEthnicityNull() As Boolean
-            Return Me.IsNull(Me.tableProfile.EthnicityColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetEthnicityNull()
-            Me(Me.tableProfile.EthnicityColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsBuildNull() As Boolean
-            Return Me.IsNull(Me.tableProfile.BuildColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetBuildNull()
-            Me(Me.tableProfile.BuildColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsEducationNull() As Boolean
-            Return Me.IsNull(Me.tableProfile.EducationColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetEducationNull()
-            Me(Me.tableProfile.EducationColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsCitizenshipNull() As Boolean
-            Return Me.IsNull(Me.tableProfile.CitizenshipColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetCitizenshipNull()
-            Me(Me.tableProfile.CitizenshipColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsHobbiesNull() As Boolean
-            Return Me.IsNull(Me.tableProfile.HobbiesColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetHobbiesNull()
-            Me(Me.tableProfile.HobbiesColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsFinancialNull() As Boolean
-            Return Me.IsNull(Me.tableProfile.FinancialColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetFinancialNull()
-            Me(Me.tableProfile.FinancialColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsFamilyNull() As Boolean
-            Return Me.IsNull(Me.tableProfile.FamilyColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetFamilyNull()
-            Me(Me.tableProfile.FamilyColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsLikeIdNull() As Boolean
             Return Me.IsNull(Me.tableProfile.LikeIdColumn)
         End Function
@@ -4002,10 +3866,10 @@ Partial Public Class DataSet1
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function GetProfileRows() As ProfileRow()
-            If (Me.Table.ChildRelations("FK__Profile__LikeId__14270015") Is Nothing) Then
+            If (Me.Table.ChildRelations("FK__Profile__LikeId__31B762FC") Is Nothing) Then
                 Return New ProfileRow(-1) {}
             Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK__Profile__LikeId__14270015")),ProfileRow())
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK__Profile__LikeId__31B762FC")),ProfileRow())
             End If
         End Function
     End Class
@@ -4946,48 +4810,34 @@ Namespace DataSet1TableAdapters
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Profile] WHERE (([Id] = @Original_Id) AND ((@IsNull_Sex = 1 AN"& _ 
-                "D [Sex] IS NULL) OR ([Sex] = @Original_Sex)) AND ((@IsNull_Age = 1 AND [Age] IS "& _ 
-                "NULL) OR ([Age] = @Original_Age)) AND ((@IsNull_Ethnicity = 1 AND [Ethnicity] IS"& _ 
-                " NULL) OR ([Ethnicity] = @Original_Ethnicity)) AND ((@IsNull_Build = 1 AND [Buil"& _ 
-                "d] IS NULL) OR ([Build] = @Original_Build)) AND ((@IsNull_Education = 1 AND [Edu"& _ 
-                "cation] IS NULL) OR ([Education] = @Original_Education)) AND ((@IsNull_Citizensh"& _ 
-                "ip = 1 AND [Citizenship] IS NULL) OR ([Citizenship] = @Original_Citizenship)) AN"& _ 
-                "D ((@IsNull_Hobbies = 1 AND [Hobbies] IS NULL) OR ([Hobbies] = @Original_Hobbies"& _ 
-                ")) AND ((@IsNull_Financial = 1 AND [Financial] IS NULL) OR ([Financial] = @Origi"& _ 
-                "nal_Financial)) AND ((@IsNull_Family = 1 AND [Family] IS NULL) OR ([Family] = @O"& _ 
-                "riginal_Family)) AND ((@IsNull_LikeId = 1 AND [LikeId] IS NULL) OR ([LikeId] = @"& _ 
-                "Original_LikeId)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Profile] WHERE (([Id] = @Original_Id) AND ([Sex] = @Original_S"& _ 
+                "ex) AND ([Age] = @Original_Age) AND ([Ethnicity] = @Original_Ethnicity) AND ([Bu"& _ 
+                "ild] = @Original_Build) AND ([Education] = @Original_Education) AND ([Citizenshi"& _ 
+                "p] = @Original_Citizenship) AND ([Hobbies] = @Original_Hobbies) AND ([Financial]"& _ 
+                " = @Original_Financial) AND ([Family] = @Original_Family) AND ((@IsNull_LikeId ="& _ 
+                " 1 AND [LikeId] IS NULL) OR ([LikeId] = @Original_LikeId)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sex", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sex", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sex", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sex", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Age", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Age", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Age", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Age", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ethnicity", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ethnicity", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ethnicity", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ethnicity", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Build", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Build", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Build", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Build", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Education", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Education", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Education", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Education", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Citizenship", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Citizenship", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Citizenship", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Citizenship", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Hobbies", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hobbies", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Hobbies", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hobbies", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Financial", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Financial", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Financial", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Financial", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Family", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Family", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Family", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Family", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_LikeId", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LikeId", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_LikeId", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LikeId", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Profile] ([Sex], [Age], [Ethnicity], [Build], [Education], [Ci"& _ 
-                "tizenship], [Hobbies], [Financial], [Family], [LikeId]) VALUES (@Sex, @Age, @Eth"& _ 
-                "nicity, @Build, @Education, @Citizenship, @Hobbies, @Financial, @Family, @LikeId"& _ 
-                ");"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, Sex, Age, Ethnicity, Build, Education, Citizenship, Hobbies, Fina"& _ 
-                "ncial, Family, LikeId FROM Profile WHERE (Id = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Profile] ([Id], [Sex], [Age], [Ethnicity], [Build], [Education"& _ 
+                "], [Citizenship], [Hobbies], [Financial], [Family], [LikeId]) VALUES (@Id, @Sex,"& _ 
+                " @Age, @Ethnicity, @Build, @Education, @Citizenship, @Hobbies, @Financial, @Fami"& _ 
+                "ly, @LikeId);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, Sex, Age, Ethnicity, Build, Education, Citizenship, Ho"& _ 
+                "bbies, Financial, Family, LikeId FROM Profile WHERE (Id = @Id)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sex", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sex", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Age", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Age", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ethnicity", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ethnicity", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5000,23 +4850,19 @@ Namespace DataSet1TableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LikeId", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LikeId", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Profile] SET [Sex] = @Sex, [Age] = @Age, [Ethnicity] = @Ethnicity, "& _ 
-                "[Build] = @Build, [Education] = @Education, [Citizenship] = @Citizenship, [Hobbi"& _ 
-                "es] = @Hobbies, [Financial] = @Financial, [Family] = @Family, [LikeId] = @LikeId"& _ 
-                " WHERE (([Id] = @Original_Id) AND ((@IsNull_Sex = 1 AND [Sex] IS NULL) OR ([Sex]"& _ 
-                " = @Original_Sex)) AND ((@IsNull_Age = 1 AND [Age] IS NULL) OR ([Age] = @Origina"& _ 
-                "l_Age)) AND ((@IsNull_Ethnicity = 1 AND [Ethnicity] IS NULL) OR ([Ethnicity] = @"& _ 
-                "Original_Ethnicity)) AND ((@IsNull_Build = 1 AND [Build] IS NULL) OR ([Build] = "& _ 
-                "@Original_Build)) AND ((@IsNull_Education = 1 AND [Education] IS NULL) OR ([Educ"& _ 
-                "ation] = @Original_Education)) AND ((@IsNull_Citizenship = 1 AND [Citizenship] I"& _ 
-                "S NULL) OR ([Citizenship] = @Original_Citizenship)) AND ((@IsNull_Hobbies = 1 AN"& _ 
-                "D [Hobbies] IS NULL) OR ([Hobbies] = @Original_Hobbies)) AND ((@IsNull_Financial"& _ 
-                " = 1 AND [Financial] IS NULL) OR ([Financial] = @Original_Financial)) AND ((@IsN"& _ 
-                "ull_Family = 1 AND [Family] IS NULL) OR ([Family] = @Original_Family)) AND ((@Is"& _ 
-                "Null_LikeId = 1 AND [LikeId] IS NULL) OR ([LikeId] = @Original_LikeId)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELEC"& _ 
-                "T Id, Sex, Age, Ethnicity, Build, Education, Citizenship, Hobbies, Financial, Fa"& _ 
-                "mily, LikeId FROM Profile WHERE (Id = @Id)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Profile] SET [Id] = @Id, [Sex] = @Sex, [Age] = @Age, [Ethnicity] = "& _ 
+                "@Ethnicity, [Build] = @Build, [Education] = @Education, [Citizenship] = @Citizen"& _ 
+                "ship, [Hobbies] = @Hobbies, [Financial] = @Financial, [Family] = @Family, [LikeI"& _ 
+                "d] = @LikeId WHERE (([Id] = @Original_Id) AND ([Sex] = @Original_Sex) AND ([Age]"& _ 
+                " = @Original_Age) AND ([Ethnicity] = @Original_Ethnicity) AND ([Build] = @Origin"& _ 
+                "al_Build) AND ([Education] = @Original_Education) AND ([Citizenship] = @Original"& _ 
+                "_Citizenship) AND ([Hobbies] = @Original_Hobbies) AND ([Financial] = @Original_F"& _ 
+                "inancial) AND ([Family] = @Original_Family) AND ((@IsNull_LikeId = 1 AND [LikeId"& _ 
+                "] IS NULL) OR ([LikeId] = @Original_LikeId)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, Sex, Age, Ethnicity, "& _ 
+                "Build, Education, Citizenship, Hobbies, Financial, Family, LikeId FROM Profile W"& _ 
+                "HERE (Id = @Id)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sex", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sex", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Age", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Age", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ethnicity", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ethnicity", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5028,27 +4874,17 @@ Namespace DataSet1TableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Family", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Family", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@LikeId", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LikeId", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Sex", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sex", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sex", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sex", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Age", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Age", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Age", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Age", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ethnicity", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ethnicity", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ethnicity", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ethnicity", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Build", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Build", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Build", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Build", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Education", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Education", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Education", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Education", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Citizenship", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Citizenship", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Citizenship", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Citizenship", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Hobbies", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hobbies", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Hobbies", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hobbies", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Financial", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Financial", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Financial", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Financial", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Family", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Family", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Family", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Family", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_LikeId", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LikeId", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_LikeId", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LikeId", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5128,74 +4964,56 @@ Namespace DataSet1TableAdapters
         Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_Sex As String, ByVal Original_Age As String, ByVal Original_Ethnicity As String, ByVal Original_Build As String, ByVal Original_Education As String, ByVal Original_Citizenship As String, ByVal Original_Hobbies As String, ByVal Original_Financial As String, ByVal Original_Family As String, ByVal Original_LikeId As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Id,Integer)
             If (Original_Sex Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Sex")
             Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Sex,String)
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_Sex,String)
             End If
             If (Original_Age Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Age")
             Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Age,String)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Age,String)
             End If
             If (Original_Ethnicity Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Ethnicity")
             Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Ethnicity,String)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_Ethnicity,String)
             End If
             If (Original_Build Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Build")
             Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Build,String)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Build,String)
             End If
             If (Original_Education Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Education")
             Else
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Education,String)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Education,String)
             End If
             If (Original_Citizenship Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Citizenship")
             Else
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Citizenship,String)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Citizenship,String)
             End If
             If (Original_Hobbies Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Hobbies")
             Else
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Hobbies,String)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_Hobbies,String)
             End If
             If (Original_Financial Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Financial")
             Else
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Financial,String)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Financial,String)
             End If
             If (Original_Family Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Family")
             Else
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_Family,String)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_Family,String)
             End If
             If (Original_LikeId.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_LikeId.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(Original_LikeId.Value,Integer)
             Else
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -5216,56 +5034,57 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Sex As String, ByVal Age As String, ByVal Ethnicity As String, ByVal Build As String, ByVal Education As String, ByVal Citizenship As String, ByVal Hobbies As String, ByVal Financial As String, ByVal Family As String, ByVal LikeId As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Insert(ByVal Id As Integer, ByVal Sex As String, ByVal Age As String, ByVal Ethnicity As String, ByVal Build As String, ByVal Education As String, ByVal Citizenship As String, ByVal Hobbies As String, ByVal Financial As String, ByVal Family As String, ByVal LikeId As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.InsertCommand.Parameters(0).Value = CType(Id,Integer)
             If (Sex Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Sex")
             Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(Sex,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Sex,String)
             End If
             If (Age Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Age")
             Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Age,String)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Age,String)
             End If
             If (Ethnicity Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Ethnicity")
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Ethnicity,String)
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Ethnicity,String)
             End If
             If (Build Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Build")
             Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Build,String)
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Build,String)
             End If
             If (Education Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Education")
             Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Education,String)
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Education,String)
             End If
             If (Citizenship Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Citizenship")
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Citizenship,String)
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Citizenship,String)
             End If
             If (Hobbies Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Hobbies")
             Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Hobbies,String)
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Hobbies,String)
             End If
             If (Financial Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Financial")
             Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Financial,String)
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Financial,String)
             End If
             If (Family Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Family")
             Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Family,String)
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(Family,String)
             End If
             If (LikeId.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(9).Value = CType(LikeId.Value,Integer)
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(LikeId.Value,Integer)
             Else
-                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -5287,6 +5106,7 @@ Namespace DataSet1TableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
+                    ByVal Id As Integer,  _
                     ByVal Sex As String,  _
                     ByVal Age As String,  _
                     ByVal Ethnicity As String,  _
@@ -5307,130 +5127,111 @@ Namespace DataSet1TableAdapters
                     ByVal Original_Hobbies As String,  _
                     ByVal Original_Financial As String,  _
                     ByVal Original_Family As String,  _
-                    ByVal Original_LikeId As Global.System.Nullable(Of Integer),  _
-                    ByVal Id As Integer) As Integer
+                    ByVal Original_LikeId As Global.System.Nullable(Of Integer)) As Integer
+            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Id,Integer)
             If (Sex Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Sex")
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Sex,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Sex,String)
             End If
             If (Age Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Age")
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Age,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Age,String)
             End If
             If (Ethnicity Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Ethnicity")
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Ethnicity,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Ethnicity,String)
             End If
             If (Build Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Build")
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Build,String)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Build,String)
             End If
             If (Education Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Education")
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Education,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Education,String)
             End If
             If (Citizenship Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Citizenship")
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Citizenship,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Citizenship,String)
             End If
             If (Hobbies Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Hobbies")
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Hobbies,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Hobbies,String)
             End If
             If (Financial Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Financial")
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Financial,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Financial,String)
             End If
             If (Family Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Family")
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Family,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Family,String)
             End If
             If (LikeId.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(LikeId.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(LikeId.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Id,Integer)
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Id,Integer)
             If (Original_Sex Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Sex")
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
                 Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Sex,String)
             End If
             If (Original_Age Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Age")
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Age,String)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_Age,String)
             End If
             If (Original_Ethnicity Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Ethnicity")
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Ethnicity,String)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Ethnicity,String)
             End If
             If (Original_Build Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Build")
             Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Build,String)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Build,String)
             End If
             If (Original_Education Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Education")
             Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Education,String)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Education,String)
             End If
             If (Original_Citizenship Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Citizenship")
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Citizenship,String)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Citizenship,String)
             End If
             If (Original_Hobbies Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Hobbies")
             Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_Hobbies,String)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Hobbies,String)
             End If
             If (Original_Financial Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Financial")
             Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_Financial,String)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Financial,String)
             End If
             If (Original_Family Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("Original_Family")
             Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_Family,String)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Family,String)
             End If
             If (Original_LikeId.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_LikeId.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_LikeId.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Id,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5472,7 +5273,7 @@ Namespace DataSet1TableAdapters
                     ByVal Original_Financial As String,  _
                     ByVal Original_Family As String,  _
                     ByVal Original_LikeId As Global.System.Nullable(Of Integer)) As Integer
-            Return Me.Update(Sex, Age, Ethnicity, Build, Education, Citizenship, Hobbies, Financial, Family, LikeId, Original_Id, Original_Sex, Original_Age, Original_Ethnicity, Original_Build, Original_Education, Original_Citizenship, Original_Hobbies, Original_Financial, Original_Family, Original_LikeId, Original_Id)
+            Return Me.Update(Original_Id, Sex, Age, Ethnicity, Build, Education, Citizenship, Hobbies, Financial, Family, LikeId, Original_Id, Original_Sex, Original_Age, Original_Ethnicity, Original_Build, Original_Education, Original_Citizenship, Original_Hobbies, Original_Financial, Original_Family, Original_LikeId)
         End Function
     End Class
     
@@ -8686,7 +8487,7 @@ Namespace DataSet1TableAdapters
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    Me.SortSelfReferenceRows(updatedRows, dataSet.Relations("FK__Profile__LikeId__14270015"), false)
+                    Me.SortSelfReferenceRows(updatedRows, dataSet.Relations("FK__Profile__LikeId__31B762FC"), false)
                     result = (result + Me._profileTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
@@ -8777,7 +8578,7 @@ Namespace DataSet1TableAdapters
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.Profile.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    Me.SortSelfReferenceRows(addedRows, dataSet.Relations("FK__Profile__LikeId__14270015"), false)
+                    Me.SortSelfReferenceRows(addedRows, dataSet.Relations("FK__Profile__LikeId__31B762FC"), false)
                     result = (result + Me._profileTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
@@ -8796,7 +8597,7 @@ Namespace DataSet1TableAdapters
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.Profile.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    Me.SortSelfReferenceRows(deletedRows, dataSet.Relations("FK__Profile__LikeId__14270015"), true)
+                    Me.SortSelfReferenceRows(deletedRows, dataSet.Relations("FK__Profile__LikeId__31B762FC"), true)
                     result = (result + Me._profileTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If

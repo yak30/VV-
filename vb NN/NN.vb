@@ -1,6 +1,4 @@
 ﻿Imports Accord.Math
-Imports Accord.Math.Decompositions
-
 
 Public Class NN
     Implements INN
@@ -35,7 +33,7 @@ Public Class NN
         'construct A and B from network
         Dim i = 0 'examples
         For Each ex In examples
-            feed(ex.from, ex.match_to)
+            feed(ex.from, ex.match)
             Dim j = 0
             For Each n In neurons.Take(dims)
                 A(i, j) = n.val
@@ -43,20 +41,20 @@ Public Class NN
                 j += 1
             Next
             i += 1
-
-            'TODO: hidden layers
-            'For Each n In neurons.Take(neurons.Count - dims).Skip(dims)
-            '    For Each edge In n.inputs
-            '        A(i, j) = edge.from.val
-            '        j += 1
-            '    Next
-            'Next
-            'For Each edge In neurons(neurons.Count - dims + k).inputs
-            '    A(i, j) = edge.from.val
-            '    j += 1
-            'Next
-
         Next
+        'TODO: hidden layers
+        'For Each n In neurons.Take(neurons.Count - dims).Skip(dims)
+        '    For Each edge In n.inputs
+        '        A(i, j) = edge.from.val
+        '        j += 1
+        '    Next
+        'Next
+        'For Each edge In neurons(neurons.Count - dims + k).inputs
+        '    A(i, j) = edge.from.val
+        '    j += 1
+        'Next
+
+
 
         'm>n?
         Dim svd = New Accord.Math.Decompositions.SingularValueDecomposition(A, True, True, True)
@@ -65,7 +63,7 @@ Public Class NN
         Dim V = svd.RightSingularVectors
         Dim pseudoinverseA = V.Multiply(S.Inverse()).MultiplyByTranspose(U)
         Dim X = pseudoinverseA.Multiply(B)
-        'Dim X(,) = svd.Solve(B)
+        'Dim X(,) = A.Solve(B) 'Also works (?), but implicit
 
         'update weights
         i = 0 'neuron
