@@ -406,7 +406,7 @@ Partial Class Form1
         Me.ComboBoxMSex.DataSource = Me.TSexBindingSource2
         Me.ComboBoxMSex.DisplayMember = "Sex"
         Me.ComboBoxMSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
-        Me.ComboBoxMSex.Enabled = False
+        Me.ComboBoxMSex.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBoxMSex.FormattingEnabled = True
         Me.ComboBoxMSex.Location = New System.Drawing.Point(45, 27)
         Me.ComboBoxMSex.Margin = New System.Windows.Forms.Padding(2)
@@ -460,7 +460,7 @@ Partial Class Form1
         Me.ComboBoxMEthnic.DataSource = Me.TEthnicityBindingSource2
         Me.ComboBoxMEthnic.DisplayMember = "Ethnicity"
         Me.ComboBoxMEthnic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
-        Me.ComboBoxMEthnic.Enabled = False
+        Me.ComboBoxMEthnic.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBoxMEthnic.FormattingEnabled = True
         Me.ComboBoxMEthnic.Location = New System.Drawing.Point(256, 27)
         Me.ComboBoxMEthnic.Name = "ComboBoxMEthnic"
@@ -478,7 +478,7 @@ Partial Class Form1
         Me.ComboBoxMFamily.DataSource = Me.TFamilyBindingSource2
         Me.ComboBoxMFamily.DisplayMember = "Family"
         Me.ComboBoxMFamily.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
-        Me.ComboBoxMFamily.Enabled = False
+        Me.ComboBoxMFamily.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBoxMFamily.FormattingEnabled = True
         Me.ComboBoxMFamily.Location = New System.Drawing.Point(900, 27)
         Me.ComboBoxMFamily.Name = "ComboBoxMFamily"
@@ -496,7 +496,7 @@ Partial Class Form1
         Me.ComboBoxMFinancial.DataSource = Me.TFinancialBindingSource2
         Me.ComboBoxMFinancial.DisplayMember = "Financial"
         Me.ComboBoxMFinancial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
-        Me.ComboBoxMFinancial.Enabled = False
+        Me.ComboBoxMFinancial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBoxMFinancial.FormattingEnabled = True
         Me.ComboBoxMFinancial.Location = New System.Drawing.Point(792, 27)
         Me.ComboBoxMFinancial.Name = "ComboBoxMFinancial"
@@ -523,7 +523,7 @@ Partial Class Form1
         Me.ComboBoxMHobbies.DataSource = Me.THobbiesBindingSource2
         Me.ComboBoxMHobbies.DisplayMember = "Hobbies"
         Me.ComboBoxMHobbies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
-        Me.ComboBoxMHobbies.Enabled = False
+        Me.ComboBoxMHobbies.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBoxMHobbies.FormattingEnabled = True
         Me.ComboBoxMHobbies.Location = New System.Drawing.Point(684, 27)
         Me.ComboBoxMHobbies.Name = "ComboBoxMHobbies"
@@ -550,7 +550,7 @@ Partial Class Form1
         Me.ComboBoxMCitizen.DataSource = Me.TCitizenshipBindingSource2
         Me.ComboBoxMCitizen.DisplayMember = "Citizenship"
         Me.ComboBoxMCitizen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
-        Me.ComboBoxMCitizen.Enabled = False
+        Me.ComboBoxMCitizen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBoxMCitizen.FormattingEnabled = True
         Me.ComboBoxMCitizen.Location = New System.Drawing.Point(576, 27)
         Me.ComboBoxMCitizen.Name = "ComboBoxMCitizen"
@@ -585,7 +585,7 @@ Partial Class Form1
         Me.ComboBoxMEdu.DataSource = Me.TEducationBindingSource2
         Me.ComboBoxMEdu.DisplayMember = "Education"
         Me.ComboBoxMEdu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
-        Me.ComboBoxMEdu.Enabled = False
+        Me.ComboBoxMEdu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBoxMEdu.FormattingEnabled = True
         Me.ComboBoxMEdu.Location = New System.Drawing.Point(468, 27)
         Me.ComboBoxMEdu.Name = "ComboBoxMEdu"
@@ -620,7 +620,7 @@ Partial Class Form1
         Me.ComboBoxMBuild.DataSource = Me.TBuildBindingSource2
         Me.ComboBoxMBuild.DisplayMember = "Build"
         Me.ComboBoxMBuild.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
-        Me.ComboBoxMBuild.Enabled = False
+        Me.ComboBoxMBuild.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBoxMBuild.FormattingEnabled = True
         Me.ComboBoxMBuild.Location = New System.Drawing.Point(362, 27)
         Me.ComboBoxMBuild.Name = "ComboBoxMBuild"
@@ -672,7 +672,7 @@ Partial Class Form1
         Me.ComboBoxMAge.DataSource = Me.TAgeBindingSource2
         Me.ComboBoxMAge.DisplayMember = "Age"
         Me.ComboBoxMAge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
-        Me.ComboBoxMAge.Enabled = False
+        Me.ComboBoxMAge.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBoxMAge.FormattingEnabled = True
         Me.ComboBoxMAge.Location = New System.Drawing.Point(150, 27)
         Me.ComboBoxMAge.Name = "ComboBoxMAge"

@@ -1,8 +1,12 @@
 ﻿Public Class Form1
-    Dim oneway, twoway As INN
-    Dim ExList As IList(Of Example) = New List(Of Example)
-    Dim Plist As IList(Of Profile) = New List(Of Profile)
-    Dim oneway_learned, twoway_learned As Boolean
+    Private oneway, twoway As INN
+    Private ExList As IList(Of Example) = New List(Of Example)
+    Private Plist As IList(Of Profile) = New List(Of Profile)
+    Private oneway_learned, twoway_learned As Boolean
+    'Public Shared ReadOnly classes As Double() = {1, 1, 4, 4, 1, 1, 4, 1, 1}
+    'Public Shared ReadOnly reg_limits As Double() = {2, 4, 0, 0, 3, 4, 0, 4, 3}
+    Public Shared ReadOnly classes As Double() = {1, 1, 1, 1, 1, 1, 1, 1, 1}
+    Public Shared ReadOnly reg_limits As Double() = {2, 4, 4, 4, 3, 4, 4, 4, 3}
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.ProfileTableAdapter.Fill(Me.DataSet1.Profile)
@@ -16,92 +20,7 @@
         Me.TAgeTableAdapter.Fill(Me.DataSet1.TAge)
         Me.TSexTableAdapter.Fill(Me.DataSet1.TSex)
     End Sub
-    Private Sub Fill()
-        ExList = New List(Of Example)
 
-        Dim p1 = New Profile
-        p1.att(0) = 1
-        p1.att(1) = 2
-        p1.att(2) = 2
-        p1.att(3) = 3
-        p1.att(4) = 2
-        p1.att(5) = 2
-        p1.att(6) = 2
-        p1.att(7) = 1
-        p1.att(8) = 2
-
-
-        Dim p2 = New Profile
-        p2.att(0) = 1
-        p2.att(1) = 2
-        p2.att(2) = 2
-        p2.att(3) = 2
-        p2.att(4) = 4
-        p2.att(5) = 3
-        p2.att(6) = 1
-        p2.att(7) = 2
-        p2.att(8) = 1
-
-        Dim p3 = New Profile
-        p3.att(0) = 1
-        p3.att(1) = 1
-        p3.att(2) = 1
-        p3.att(3) = 2
-        p3.att(4) = 3
-        p3.att(5) = 2
-        p3.att(6) = 2
-        p3.att(7) = 2
-        p3.att(8) = 2
-
-        Dim p4 = New Profile
-        p4.att(0) = 1
-        p4.att(1) = 2
-        p4.att(2) = 2
-        p4.att(3) = 3
-        p4.att(4) = 2
-        p4.att(5) = 2
-        p4.att(6) = 2
-        p4.att(7) = 2
-        p4.att(8) = 2
-
-        Dim p5 = New Profile
-        p5.att(0) = 1
-        p5.att(1) = 2
-        p5.att(2) = 2
-        p5.att(3) = 3
-        p5.att(4) = 1
-        p5.att(5) = 2
-        p5.att(6) = 2
-        p5.att(7) = 1
-        p5.att(8) = 1
-
-        Dim exp1 = New Example
-        exp1.from = p1
-        exp1.match = p2
-
-        Dim exp2 = New Example
-        exp2.from = p2
-        exp2.match = p1
-
-        Dim exp3 = New Example
-        exp3.from = p3
-        exp3.match = p2
-
-        Dim exp4 = New Example
-        exp4.from = p4
-        exp4.match = p5
-
-        Dim exp5 = New Example
-        exp5.from = p5
-        exp5.match = p4
-
-        ExList.Add(exp1)
-        ExList.Add(exp2)
-        ExList.Add(exp3)
-        ExList.Add(exp4)
-        ExList.Add(exp5)
-
-    End Sub
     Private Function to_id(col As Integer, row As DataGridViewRow) As Integer
         Dim q = From r As DataRowView In CType(DGV.Columns(col), DataGridViewComboBoxColumn).Items
                         Where r.Item(0) = row.Cells(col).Value
@@ -159,45 +78,44 @@
         Return you
     End Function
     Private Sub output_match(mres As Profile)
-        ComboBoxMSex.SelectedIndex = mres.att(0)
-        ComboBoxMAge.SelectedIndex = mres.att(1)
-        ComboBoxMEthnic.SelectedIndex = mres.att(2)
-        ComboBoxMBuild.SelectedIndex = mres.att(3)
-        ComboBoxMEdu.SelectedIndex = mres.att(4)
-        ComboBoxMCitizen.SelectedIndex = mres.att(5)
-        ComboBoxMHobbies.SelectedIndex = mres.att(6)
-        ComboBoxMFinancial.SelectedIndex = mres.att(7)
-        ComboBoxMFamily.SelectedIndex = mres.att(8)
+        ComboBoxMSex.SelectedValue = mres.att(0)
+        ComboBoxMAge.SelectedValue = mres.att(1)
+        ComboBoxMEthnic.SelectedValue = mres.att(2)
+        ComboBoxMBuild.SelectedValue = mres.att(3)
+        ComboBoxMEdu.SelectedValue = mres.att(4)
+        ComboBoxMCitizen.SelectedValue = mres.att(5)
+        ComboBoxMHobbies.SelectedValue = mres.att(6)
+        ComboBoxMFinancial.SelectedValue = mres.att(7)
+        ComboBoxMFamily.SelectedValue = mres.att(8)
     End Sub
 
     Private Sub ButtonOneWay_Click(sender As Object, e As EventArgs) Handles ButtonOneWay.Click
-        If DataSet1.HasChanges() Then oneway_learned = False
         If oneway_learned = False Then
             populate()
 
             For Each row As DataGridViewRow In DGV.Rows
                 If row.IsNewRow Then Exit For
-                If IsDBNull(row.Cells("LikeIdDataGridViewTextBoxColumn").Value) Then Continue For
+                If IsDBNull(row.Cells("LikeIdDataGridViewTextBoxColumn").Value) OrElse
+                    row.Cells("LikeIdDataGridViewTextBoxColumn").Value >= DGV.Rows.Count Then Continue For
                 Dim ex As New Example
                 ex.match = Plist(row.Cells("IdDataGridViewTextBoxColumn").Value - 1)
                 ex.from = Plist(row.Cells("LikeIdDataGridViewTextBoxColumn").Value - 1)
                 ExList.Add(ex)
             Next
 
-            oneway = New NN(9)
+            oneway = New NN(classes, reg_limits)
             oneway.learn(ExList)
             oneway_learned = True
         End If
 
         Dim mres = oneway.match(your_profile)
         highlight_matches(mres)
-        ToolStripStatusLabel1.Text = "Raw results: " + String.Join(" ", mres.att)
+        'ToolStripStatusLabel1.Text = "Raw results: " + String.Join(" ", mres.att)
 
-        'output_match(mres)
+        output_match(mres)
     End Sub
 
     Private Sub ButtonTwoWay_Click(sender As Object, e As EventArgs) Handles ButtonTwoWay.Click
-        If DataSet1.HasChanges() Then twoway_learned = False
         If twoway_learned = False Then
             populate()
 
@@ -214,16 +132,16 @@
                 ExList.Add(ex2)
             Next
 
-            twoway = New NN(9)
+            twoway = New NN(classes, reg_limits)
             twoway.learn(ExList)
             twoway_learned = True
         End If
 
         Dim mres = twoway.match(your_profile)
         highlight_matches(mres)
-        ToolStripStatusLabel1.Text = "Raw results: " + String.Join(" ", mres.att)
+        'ToolStripStatusLabel1.Text = "Raw results: " + String.Join(" ", mres.att)
 
-        'output_match(mres)
+        output_match(mres)
     End Sub
 
     Private Sub ButtonOneWay_MouseEnter(sender As Object, e As EventArgs) Handles ButtonOneWay.MouseEnter
@@ -236,7 +154,7 @@
 
     Private Sub DGV_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV.CellMouseDoubleClick
         Dim s As DataGridView = sender
-        If s.CurrentCell.OwningColumn.Name = "IdDataGridViewTextBoxColumn" Then
+        If s.CurrentCell.OwningColumn.Name = "IdDataGridViewTextBoxColumn" And Not s.CurrentRow.IsNewRow Then
             Dim row = s.CurrentCell.OwningRow
             ComboBoxYSex.SelectedValue = to_id(1, row)
             ComboBoxYAge.SelectedValue = to_id(2, row)
@@ -281,9 +199,22 @@
         twoway_learned = False
     End Sub
 
+
+    Private Sub DGV_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles DGV.CellValueChanged
+        oneway_learned = False
+        twoway_learned = False
+    End Sub
+
+    Private Sub DGV_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DGV.RowsAdded
+        Dim s As DataGridView = sender
+        If s.CurrentRow IsNot Nothing AndAlso s.CurrentRow.Index = s.NewRowIndex - 1 Then
+            'MsgBox(DataSet1.Profile.Rows(s.CurrentRow.Index).Item(0))
+            s.CurrentRow.Cells("IdDataGridViewTextBoxColumn").Value = s.CurrentRow.Index + 1
+        End If
+    End Sub
 End Class
 Public Class Profile
-    Public att(8) As Double
+    Public att(Form1.classes.Length - 1) As Double
 End Class
 Public Class Example
     Public from, match As Profile
