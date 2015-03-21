@@ -46,19 +46,6 @@ Public Class NN
             Next
             i += 1
         Next
-        'TODO: hidden layers
-        'For Each n In neurons.Take(neurons.Count - dims).Skip(dims)
-        '    For Each edge In n.inputs
-        '        A(i, j) = edge.from.val
-        '        j += 1
-        '    Next
-        'Next
-        'For Each edge In neurons(neurons.Count - dims + k).inputs
-        '    A(i, j) = edge.from.val
-        '    j += 1
-        'Next
-
-
 
         'm>n?
         Dim svd = New Accord.Math.Decompositions.SingularValueDecomposition(A, True, True, True)

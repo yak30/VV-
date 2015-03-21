@@ -91,6 +91,7 @@
 
     Private Sub ButtonOneWay_Click(sender As Object, e As EventArgs) Handles ButtonOneWay.Click
         If oneway_learned = False Then
+            ExList.Clear()
             populate()
 
             For Each row As DataGridViewRow In DGV.Rows
@@ -117,11 +118,13 @@
 
     Private Sub ButtonTwoWay_Click(sender As Object, e As EventArgs) Handles ButtonTwoWay.Click
         If twoway_learned = False Then
+            ExList.Clear()
             populate()
 
             For Each row As DataGridViewRow In DGV.Rows
                 If row.IsNewRow Then Exit For
-                If IsDBNull(row.Cells("LikeIdDataGridViewTextBoxColumn").Value) Then Continue For
+                If IsDBNull(row.Cells("LikeIdDataGridViewTextBoxColumn").Value) OrElse
+                    row.Cells("LikeIdDataGridViewTextBoxColumn").Value >= DGV.Rows.Count Then Continue For
                 Dim ex As New Example 'who likes you?
                 ex.match = Plist(row.Cells("IdDataGridViewTextBoxColumn").Value - 1)
                 ex.from = Plist(row.Cells("LikeIdDataGridViewTextBoxColumn").Value - 1)
@@ -171,7 +174,7 @@
 
     Private Sub DGV_CellMouseMove(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV.CellMouseMove
         ToolStripStatusLabel1.Text = "Double click on the Id column to use a saved profile for matching." +
-            " Matched Ids (if any) will be colored dark green to light green for excellent to passable matches, respectively."
+            " Matched Ids (if any) will be colored from dark green to light green for matches from very good to passable."
 
     End Sub
 
