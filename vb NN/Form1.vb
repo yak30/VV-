@@ -215,6 +215,10 @@
             s.CurrentRow.Cells("IdDataGridViewTextBoxColumn").Value = s.CurrentRow.Index + 1
         End If
     End Sub
+
+    Private Sub DGV_DataError(sender As Object, e As DataGridViewDataErrorEventArgs) Handles DGV.DataError
+
+    End Sub
 End Class
 Public Class Profile
     Public att(Form1.classes.Length - 1) As Double
